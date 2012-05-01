@@ -1,0 +1,3 @@
+name: CrafterTracker
+main: tmc.CrafterTracker.CrafterTrackerPlugin
+version: 0.01
