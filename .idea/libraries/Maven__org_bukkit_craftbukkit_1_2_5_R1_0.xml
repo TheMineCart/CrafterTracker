@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="Maven: org.bukkit:craftbukkit:1.2.5-R1.0">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bukkit/craftbukkit/1.2.5-R1.0/craftbukkit-1.2.5-R1.0.jar!/" />
+    </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/bukkit/craftbukkit/1.2.5-R1.0/craftbukkit-1.2.5-R1.0-javadoc.jar!/" />
     </JAVADOC>
