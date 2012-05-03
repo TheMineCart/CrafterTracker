@@ -12,7 +12,9 @@ class SessionMap {
   var sessions: Map[String, Session] = new HashMap[String, Session]
 
   def get(playerName: String): Session = {
-    sessions.get(playerName).get
+    val session: Option[Session] = sessions.get(playerName)
+    if (session == None) return null
+    session.get
   }
 
   def put(playerName: String, session: Session) {
@@ -21,5 +23,9 @@ class SessionMap {
 
   def remove(playerName: String) {
     sessions -= playerName
+  }
+
+  def clear() {
+    sessions = sessions.empty
   }
 }
