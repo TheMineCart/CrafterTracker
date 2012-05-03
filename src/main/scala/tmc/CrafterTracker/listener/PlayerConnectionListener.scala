@@ -15,14 +15,14 @@ class PlayerConnectionListener(server: Server, sessionRepository: SessionReposit
   var this.sessionRepository = sessionRepository
 
   @EventHandler
-  def onPlayerJoin(event: PlayerJoinEvent) {
-    event.getPlayer.sendMessage("You Have Joined")
-    var playerName = event.getPlayer.getName
-    sessionsMap += playerName -> new Session(playerName)
+  def onPlayerConnect(event: PlayerLoginEvent) {
+    val playerName = event.getPlayer.getName
+    val ipAddress = event.getAddress.toString
+    sessionsMap += playerName -> new Session(playerName, ipAddress)
   }
 
   @EventHandler
-  def onPlayerLeave(event: PlayerQuitEvent) {
+  def onPlayerDisconnect(event: PlayerQuitEvent) {
     var session: Session = sessionsMap.get(event.getPlayer.getName).get
     session.disconnected
     sessionRepository.save(session)

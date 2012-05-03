@@ -6,6 +6,7 @@ import org.joda.time.DateTime
 import tmc.BukkitTestUtilities.Services.TimeFreezeService
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
+import tmc.CrafterTracker.builders.aSession
 
 // Created by cyrus on 5/1/12 at 12:05 PM
 
@@ -13,14 +14,14 @@ import org.scalatest.junit.JUnitRunner
 class SessionTest extends FlatSpec with ShouldMatchers {
 
   it should "have a name" in {
-    var session = new Session("Sam")
+    var session = aSession.withPlayerName("Sam").build
 
     session.username should equal ("Sam")
   }
 
   it should "have connectedAt now" in {
     TimeFreezeService.freeze()
-    var session = new Session("Sam")
+    var session = aSession.withPlayerName("Sam").build
 
     session.connectedAt should equal (new DateTime())
     TimeFreezeService.unfreeze()
@@ -28,7 +29,7 @@ class SessionTest extends FlatSpec with ShouldMatchers {
 
   it should "have disconnectedAt now" in {
     TimeFreezeService.freeze()
-    var session = new Session("Sam")
+    var session = aSession.withPlayerName("Sam").build
 
     session.disconnected
 
@@ -37,7 +38,7 @@ class SessionTest extends FlatSpec with ShouldMatchers {
   }
 
   it should "Count blocks broken" in {
-    var session = new Session("Jason733i")
+    var session = aSession.withPlayerName("Jason").build
 
     session.blocksBroken should equal (0)
     session.blockBroken
@@ -45,7 +46,7 @@ class SessionTest extends FlatSpec with ShouldMatchers {
   }
 
   it should "Count blocks placed" in {
-    var session = new Session("Jason733i")
+    var session = aSession.withPlayerName("Jason").build
 
     session.blocksPlaced should equal (0)
     session.blockPlaced
