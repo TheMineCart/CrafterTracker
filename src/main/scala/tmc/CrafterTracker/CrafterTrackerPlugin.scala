@@ -13,7 +13,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
 
   override def onEnable() {
     server = getServer
-    server.getPluginManager().registerEvents(new PlayerConnectionListener(server, new SessionRepository), this)
+    server.getPluginManager().registerEvents(new PlayerConnectionListener(new SessionRepository), this)
 
     getLogger.info("***********************************************")
     getLogger.info("Hello World")
