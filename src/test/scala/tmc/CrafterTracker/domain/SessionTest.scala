@@ -4,9 +4,12 @@ import org.scalatest.FlatSpec
 import org.scalatest.matchers.ShouldMatchers
 import org.joda.time.DateTime
 import tmc.BukkitTestUtilities.Services.TimeFreezeService
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/1/12 at 12:05 PM
 
+@RunWith(classOf[JUnitRunner])
 class SessionTest extends FlatSpec with ShouldMatchers {
 
   it should "have a name" in {

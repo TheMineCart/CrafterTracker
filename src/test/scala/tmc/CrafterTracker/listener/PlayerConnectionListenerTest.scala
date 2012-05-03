@@ -9,9 +9,12 @@ import tmc.CrafterTracker.domain.Session
 import org.joda.time.DateTime
 import tmc.BukkitTestUtilities.Services.TimeFreezeService
 import tmc.CrafterTracker.services.SessionRepository
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/1/12 at 3:20 PM
 
+@RunWith(classOf[JUnitRunner])
 class PlayerConnectionListenerTest extends FlatSpec with ShouldMatchers {
   var sessionRepository = new SessionRepository
   var playerConnectionListener = new PlayerConnectionListener(new TestServer, sessionRepository)

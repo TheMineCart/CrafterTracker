@@ -1,8 +1,6 @@
 package tmc.CrafterTracker.services
 
 import tmc.CrafterTracker.domain.Session
-import scala.collection.mutable
-import collection.mutable.Set
 
 // Created by cyrus on 5/2/12 at 1:36 PM
 

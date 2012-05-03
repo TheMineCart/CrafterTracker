@@ -18,7 +18,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/2.7.3/mongo-java-driver-2.7.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/scalatest/scalatest/1.3/scalatest-1.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="/usr/share/java/scala-compiler.jar" path-in-jar="/" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/scala/plugin.yml" />
     </root>
   </artifact>
 </component>
