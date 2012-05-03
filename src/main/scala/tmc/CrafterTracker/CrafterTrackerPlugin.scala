@@ -1,6 +1,7 @@
 package tmc.CrafterTracker
 
-import listener.PlayerConnectionListener
+import executors.SessionInformationExecutor
+import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.Server
 import services.SessionRepository
@@ -14,10 +15,8 @@ class CrafterTrackerPlugin extends JavaPlugin {
   override def onEnable() {
     server = getServer
     server.getPluginManager().registerEvents(new PlayerConnectionListener(new SessionRepository), this)
-
-    getLogger.info("***********************************************")
-    getLogger.info("Hello World")
-    getLogger.info("***********************************************")
+    server.getPluginManager().registerEvents(new PlayerInteractionListener, this)
+    getCommand("sessioninfo").setExecutor(new SessionInformationExecutor)
   }
 
   override def onDisable() {

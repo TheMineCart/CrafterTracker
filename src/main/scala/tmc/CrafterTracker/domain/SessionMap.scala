@@ -1,6 +1,6 @@
 package tmc.CrafterTracker.domain
 
-import collection.immutable.HashMap
+import collection.mutable.HashMap
 
 // Created by cyrus on 5/3/12 at 11:46 AM
 
@@ -9,7 +9,7 @@ object SessionMap extends SessionMap {
 }
 
 class SessionMap {
-  var sessions: Map[String, Session] = new HashMap[String, Session]
+  var sessions: HashMap[String, Session] = new HashMap[String, Session]
 
   def get(playerName: String): Session = {
     val session: Option[Session] = sessions.get(playerName)

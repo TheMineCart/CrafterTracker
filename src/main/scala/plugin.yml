@@ -1,3 +1,9 @@
 name: CrafterTracker
 main: tmc.CrafterTracker.CrafterTrackerPlugin
 version: 0.01
+
+commands:
+  sessioninfo:
+    description: Display your session info.
+    permissions: CrafterTracker.sessioninfo
+    usage: /<command>
