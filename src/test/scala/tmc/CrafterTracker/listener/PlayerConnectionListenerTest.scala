@@ -12,7 +12,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.bukkit.event.player.{PlayerLoginEvent, PlayerQuitEvent, PlayerJoinEvent}
 import java.net.InetAddress
-import tmc.CrafterTracker.builders.{aSession}
+import tmc.CrafterTracker.builders.aSession
 
 // Created by cyrus on 5/1/12 at 3:20 PM
 
@@ -38,7 +38,9 @@ class PlayerConnectionListenerTest extends FlatSpec with ShouldMatchers {
 
     sessionRepository.sessions.size should equal (1)
     playerConnectionListener.sessionsMap.size should equal (0)
-    sessionRepository.findByPlayerName("Jason").last.disconnectedAt should equal (new DateTime)
+    val session: Session = sessionRepository.findByPlayerName("Jason").last
+    session.disconnectedAt should equal (new DateTime)
+    session.ipAddress should equal ("127.0.0.1")
     TimeFreezeService.unfreeze()
   }
 }
