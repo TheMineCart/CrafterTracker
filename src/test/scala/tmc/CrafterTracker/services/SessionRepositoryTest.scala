@@ -4,6 +4,7 @@ import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 import tmc.CrafterTracker.domain.Session
 import tmc.BukkitTestUtilities.Services.RepositoryTest
+import org.joda.time.DateTime
 
 // Created by cyrus on 5/4/12 at 2:00 PM
 
@@ -44,6 +45,35 @@ class SessionRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatc
 
     jasonSessions.head.username should equal ("Sam")
     jasonSessions.size should equal (2)
+  }
+
+  it should "order sessions by most recent connectedAt" in {
+    var session: Session = new Session("Jason", "127.0.0.1")
+    val now: DateTime = new DateTime()
+
+    session.connectedAt = now
+    repository.save(session)
+    session.connectedAt = now.plusMinutes(10)
+    repository.save(session)
+    session.connectedAt = now.plusMinutes(5)
+    repository.save(session)
+    session.connectedAt = now.minusMinutes(4)
+    repository.save(session)
+
+    repository.count should equal (4)
+
+    val sessions: List[Session] = repository.findByPlayerName("Jason")
+
+    sessions(0).connectedAt should equal (now.plusMinutes(10))
+    sessions(1).connectedAt should equal (now.plusMinutes(5))
+    sessions(2).connectedAt should equal (now)
+    sessions(3).connectedAt should equal (now.minusMinutes(4))
+
+    repository.findMostRecentByPlayerName("Jason").connectedAt should equal (now.plusMinutes(10))
+  }
+
+  it should "return null if there is no session for a playerName" in {
+    repository.findMostRecentByPlayerName("Jason") should equal (null)
   }
 
 }

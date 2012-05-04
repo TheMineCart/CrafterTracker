@@ -20,12 +20,23 @@ class SessionRepository(c: DBCollection) {
 
   def findByPlayerName(playerName: String): List[Session] = {
     val cursor = collection.find(new BasicDBObject("username", playerName))
+
+    var order: BasicDBObject = new BasicDBObject
+    order.put("connectedAt", 1)
+    cursor.sort(order)
+
     var sessionList: List[Session] = List()
     while (cursor.hasNext) {
       val dbObject = cursor.next
       sessionList ::= gson.fromJson(dbObject.toString, classOf[Session])
     }
     sessionList
+  }
+
+  def findMostRecentByPlayerName(playerName: String): Session = {
+    val sessions: List[Session] = findByPlayerName(playerName)
+    if (sessions.size == 0) return null
+    sessions.head
   }
 
   def count: Long = collection.count()
