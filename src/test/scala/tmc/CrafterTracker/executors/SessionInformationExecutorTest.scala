@@ -10,6 +10,4 @@ class SessionInformationExecutorTest extends FlatSpec with ShouldMatchers {
   "Session Information Executor" should "send a player's session information back to the player" in {
 
   }
-
-
 }

@@ -80,7 +80,7 @@
             <groupId>tmc.BukkitTestUtilities</groupId>
             <artifactId>BukkitTestUtilities</artifactId>
             <!--<systemPath>${project.basedir}/lib/BukkitTestUtilities.jar</systemPath>-->
-            <version>0.1-SNAPSHOT</version>
+            <version>0.1.5-SNAPSHOT</version>
             <!--<scope>system</scope>-->
         </dependency>
     </dependencies>
