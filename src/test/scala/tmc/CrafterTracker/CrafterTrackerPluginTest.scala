@@ -7,12 +7,12 @@ import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 import org.scalatest.junit.JUnitRunner
 import org.junit.runner.RunWith
 import services.SessionRepository
-import tmc.BukkitTestUtilities.Services.TimeFreezeService
 import org.joda.time.DateTime
+import tmc.BukkitTestUtilities.Services.{RepositoryTest, TimeFreezeService}
 
 // Created by cyrus on 5/4/12 at 10:21 AM
 @RunWith(classOf[JUnitRunner])
-class CrafterTrackerPluginTest extends FlatSpec with ShouldMatchers with BeforeAndAfterEach {
+class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   var plugin: CrafterTrackerPlugin = null
   var testServer: TestServer = null
 
@@ -20,12 +20,12 @@ class CrafterTrackerPluginTest extends FlatSpec with ShouldMatchers with BeforeA
     plugin = new CrafterTrackerPlugin
     testServer = new TestServer
     plugin.server = testServer
-    plugin.sessionRepository = new SessionRepository
-
+    plugin.sessionRepository = new SessionRepository(getCollection("Sessions"))
   }
 
   override def afterEach() {
     SessionMap.clear()
+    clearTestData()
   }
 
   "The plugin" should "Create a session for each player currently connected when the plugin is reloaded" in {

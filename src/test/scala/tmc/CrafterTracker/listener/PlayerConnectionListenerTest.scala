@@ -1,11 +1,9 @@
 package tmc.CrafterTracker.listener
 
-import org.scalatest.FlatSpec
 import org.bukkit.entity.Player
 import org.scalatest.matchers.ShouldMatchers
 import tmc.BukkitTestUtilities.Mocks.{TestServer, TestPlayer}
 import org.joda.time.DateTime
-import tmc.BukkitTestUtilities.Services.TimeFreezeService
 import tmc.CrafterTracker.services.SessionRepository
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -13,14 +11,26 @@ import org.bukkit.event.player.{PlayerLoginEvent, PlayerQuitEvent, PlayerJoinEve
 import java.net.InetAddress
 import tmc.CrafterTracker.builders.aSession
 import tmc.CrafterTracker.domain.{SessionMap, Session}
+import tmc.BukkitTestUtilities.Services.{RepositoryTest, TimeFreezeService}
+import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 
 // Created by cyrus on 5/1/12 at 3:20 PM
 
 @RunWith(classOf[JUnitRunner])
-class PlayerConnectionListenerTest extends FlatSpec with ShouldMatchers {
-  var sessionRepository = new SessionRepository
-  var playerConnectionListener = new PlayerConnectionListener(sessionRepository)
-  var jason = new TestPlayer("Jason")
+class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
+  var sessionRepository: SessionRepository = null
+  var playerConnectionListener: PlayerConnectionListener = null
+  var jason: Player = null
+
+  override def beforeEach() {
+    sessionRepository = new SessionRepository(getCollection("Sessions"))
+    playerConnectionListener = new PlayerConnectionListener(sessionRepository)
+    jason = new TestPlayer("Jason")
+  }
+
+  override def afterEach() {
+    clearTestData()
+  }
 
   "The listener" should "add a session to the sessions map when a player joins" in {
     val event = new PlayerLoginEvent(jason, "some host", InetAddress.getLocalHost)

@@ -6,16 +6,23 @@ import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.Server
 import services.SessionRepository
+import java.util.logging.Logger
+import java.rmi.UnknownHostException
+import com.mongodb.{DB, Mongo}
 
 // Created by cyrus on 5/1/12 at 10:18 AM
 
 class CrafterTrackerPlugin extends JavaPlugin {
 
   var server: Server = null
+  var logger: Logger = null
   var sessionRepository: SessionRepository = null
+  var mongoConnection: Mongo = null
+  var crafterTrackerDB: DB = null
 
   override def onEnable() {
     server = getServer
+    logger = getLogger()
     initializeMongoDB()
     initializeDatabase()
     initializeRepositories()
@@ -45,15 +52,20 @@ class CrafterTrackerPlugin extends JavaPlugin {
   }
 
   def initializeMongoDB() {
+    try
+      mongoConnection = new Mongo("127.0.0.1")
+    catch {
+      case u: UnknownHostException => logger.warning("Something went wrong!")
+    }
 
   }
 
   def initializeDatabase() {
-
+    crafterTrackerDB = mongoConnection.getDB("CrafterTracker")
   }
 
   def initializeRepositories() {
-    sessionRepository = new SessionRepository
+    sessionRepository = new SessionRepository(crafterTrackerDB.getCollection("Sessions"))
 
   }
 
@@ -66,7 +78,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
   }
 
   def registerEventListeners() {
-    server.getPluginManager().registerEvents(new PlayerConnectionListener(new SessionRepository), this)
+    server.getPluginManager().registerEvents(new PlayerConnectionListener(sessionRepository), this)
     server.getPluginManager().registerEvents(new PlayerInteractionListener, this)
   }
 
