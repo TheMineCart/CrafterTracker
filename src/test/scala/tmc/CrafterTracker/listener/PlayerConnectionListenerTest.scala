@@ -41,14 +41,15 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
   "The listener" should "remove a session from the sessions map when a player disconnects" in {
     SessionMap.put("Jason", aSession.withPlayerName("Jason").build())
     TimeFreezeService.freeze()
-    sessionRepository.sessions.size should equal (0)
+    sessionRepository.count should equal (0)
 
     val event = new PlayerQuitEvent(jason, "I quit.")
     playerConnectionListener.onPlayerDisconnect(event)
 
-    sessionRepository.sessions.size should equal (1)
+    sessionRepository.count should equal (1)
+
     SessionMap.sessions.size should equal (0)
-    val session: Session = sessionRepository.findByPlayerName("Jason").last
+    val session: Session = sessionRepository.findByPlayerName("Jason").head
     session.disconnectedAt should equal (new DateTime)
     session.ipAddress should equal ("127.0.0.1")
     TimeFreezeService.unfreeze()

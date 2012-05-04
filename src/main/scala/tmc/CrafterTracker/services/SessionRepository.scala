@@ -1,20 +1,32 @@
 package tmc.CrafterTracker.services
 
 import tmc.CrafterTracker.domain.Session
-import com.mongodb.DBCollection
+import com.google.gson.GsonBuilder
+import tmc.CrafterTracker.adapters.DateTimeAdapter
+import org.joda.time.DateTime
+import com.mongodb.util.JSON
+import com.mongodb.{BasicDBObject, DBCollection, DBObject}
 
 // Created by cyrus on 5/2/12 at 1:36 PM
 
 class SessionRepository(c: DBCollection) {
-  var sessions: List[Session] = List()
   val collection: DBCollection = c
+  val gson = new GsonBuilder().registerTypeAdapter(classOf[DateTime], new DateTimeAdapter()).create
 
   def save(session: Session) {
-    sessions ::= session
+   val sessionObject = JSON.parse(gson.toJson(session, classOf[Session])).asInstanceOf[DBObject]
+   collection.insert(sessionObject)
   }
 
   def findByPlayerName(playerName: String): List[Session] = {
-     sessions.filter(s => (true))
+    val cursor = collection.find(new BasicDBObject("username", playerName))
+    var sessionList: List[Session] = List()
+    while (cursor.hasNext) {
+      val dbObject = cursor.next
+      sessionList ::= gson.fromJson(dbObject.toString, classOf[Session])
+    }
+    sessionList
   }
 
+  def count: Long = collection.count()
 }

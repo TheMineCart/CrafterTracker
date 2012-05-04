@@ -57,7 +57,7 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
     plugin.tearDownSessionMap()
 
     SessionMap.sessions.size should equal (0)
-    plugin.sessionRepository.sessions.size should equal (2)
+    plugin.sessionRepository.count should equal (2)
     plugin.sessionRepository.findByPlayerName("Sam").head.disconnectedAt should equal (new DateTime)
     TimeFreezeService.unfreeze()
   }
@@ -66,6 +66,6 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
     plugin.tearDownSessionMap()
 
     SessionMap.sessions.size should equal (0)
-    plugin.sessionRepository.sessions.size should equal (0)
+    plugin.sessionRepository.count should equal (0)
   }
 }
