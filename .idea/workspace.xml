@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="Functional programming at its finest">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/InfractionAdapter.scala" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tmc_BukkitTestUtilities_BukkitTestUtilities_0_1_5_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tmc_BukkitTestUtilities_BukkitTestUtilities_0_1_6_SNAPSHOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrafterTracker.iml" afterPath="$PROJECT_DIR$/CrafterTracker.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" />
     </list>
     <list id="36589b04-8bf3-4002-9dee-4ca6c20d57ad" name="workspace" comment="" />
     <ignored path="CrafterTracker.iws" />
@@ -68,22 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SessionMap.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="3" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WarningMessage.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="43" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#35#76#0" expanded="true" />
-              </folding>
+            <state line="16" column="39" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,52 +86,36 @@
       <file leaf-file-name="WarningMessageRepository.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
+            <state line="37" column="38" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#37#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WarningMessageRepositoryTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="99" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.5986622">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Infraction.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="59" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Infraction.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="9" selection-start="142" selection-end="148" vertical-scroll-proportion="0.2413793">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerConnectionListener.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="61" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionInformationExecutor.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrafterTrackerPlugin.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="9" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerInteractionListener.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerInteractionListener.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="5" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+            <state line="19" column="2" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,10 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/Utilities/RepositoryTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/DateTimeAdapter.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Message.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Session.scala" />
@@ -175,7 +150,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/InfractionAdapter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" />
       </list>
     </option>
   </component>
@@ -198,6 +177,24 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="CrafterTracker" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="CrafterTracker" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -532,6 +529,36 @@
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -593,7 +620,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="ScalaTest" />
@@ -609,13 +636,13 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -630,23 +657,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.All Tests">
-    <configuration default="false" name="PlayerInteractionListenerTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="CrafterTracker" />
-      <setting name="path" value="tmc.CrafterTracker.listener.PlayerInteractionListenerTest" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="ScalaTest.WarningMessageRepositoryTest">
     <configuration default="false" name="CrafterTrackerPluginTest.The plugin should Create a session for each player currently connected when the plugin is reloaded" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
@@ -700,6 +711,22 @@
       <extension name="scalaCoverage" />
       <module name="CrafterTracker" />
       <setting name="path" value="tmc.CrafterTracker.services.SessionRepositoryTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WarningMessageRepositoryTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="CrafterTracker" />
+      <setting name="path" value="tmc.CrafterTracker.services.WarningMessageRepositoryTest" />
       <setting name="package" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
@@ -802,6 +829,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -828,24 +873,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -899,6 +926,20 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="ScalaScriptRunConfiguration" factoryName="Scala Script">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="consoleargs" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
@@ -911,20 +952,6 @@
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ScalaScriptRunConfiguration" factoryName="Scala Script">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="consoleargs" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -956,11 +983,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="ScalaTest.All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.PlayerInteractionListenerTest" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CrafterTrackerPluginTest.The plugin should Create a session for each player currently connected when the plugin is reloaded" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.CrafterTrackerPluginTest" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.CrafterTrackerPluginTest.The plugin should save any exisiting sessions and clear the session map when plugin is disabled" />
-      <item index="5" class="java.lang.String" itemvalue="ScalaTest.SessionRepositoryTest" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CrafterTrackerPluginTest.The plugin should Create a session for each player currently connected when the plugin is reloaded" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CrafterTrackerPluginTest" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.CrafterTrackerPluginTest.The plugin should save any exisiting sessions and clear the session map when plugin is disabled" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.SessionRepositoryTest" />
+      <item index="5" class="java.lang.String" itemvalue="ScalaTest.WarningMessageRepositoryTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1070,19 +1097,22 @@
       <created>1336488568700</created>
       <updated>1336488568700</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Creating the WarningMessage domain object.">
+      <created>1336499616116</created>
+      <updated>1336499616117</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-5" width="1922" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.48824787" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.48824787" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27652735" sideWeight="0.4957265" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7620579" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6688103" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5005342" order="8" side_tool="true" content_ui="tabs" />
@@ -1092,12 +1122,13 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23794213" sideWeight="0.46741453" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19391026" sideWeight="0.357985" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23130342" sideWeight="0.67202574" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23397435" sideWeight="0.6688103" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19391026" sideWeight="0.67202574" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33118972" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19391026" sideWeight="0.6688103" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33118972" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27652735" sideWeight="0.4957265" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1139,7 +1170,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Functional programming at its finest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the WarningMessage domain object." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1168,6 +1199,7 @@
     <MESSAGE value="Now ordering the session results in order of most recent connection time." />
     <MESSAGE value="Discovering map and applying it to the uses of SessionMap." />
     <MESSAGE value="Functional programming at its finest" />
+    <MESSAGE value="Creating the WarningMessage domain object." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1211,51 +1243,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="56" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../craftbukkit-1.2.5-R1.0.jar!/org/bukkit/conversations/Conversable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="166" selection-end="166" vertical-scroll-proportion="-3.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../craftbukkit-1.2.5-R1.0.jar!/org/bukkit/plugin/messaging/PluginMessageRecipient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="169" selection-end="169" vertical-scroll-proportion="0.14492753">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../craftbukkit-1.2.5-R1.0.jar!/org/bukkit/entity/Player.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="198" selection-start="340" selection-end="340" vertical-scroll-proportion="0.148423">
-          <folding />
-        </state>
+        <state line="5" column="198" selection-start="340" selection-end="340" vertical-scroll-proportion="0.148423" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/bukkit/craftbukkit/1.2.5-R1.0/craftbukkit-1.2.5-R1.0.jar!/org/bukkit/Server.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="24" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.3482143">
-          <folding />
-        </state>
+        <state line="57" column="24" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.3482143" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala">
@@ -1265,9 +1260,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerInteractionListener.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/InfractionAdapter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+        <state line="10" column="21" selection-start="391" selection-end="404" vertical-scroll-proportion="0.22371365">
+          <folding>
+            <element signature="e#37#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="194" selection-end="223" vertical-scroll-proportion="0.13087249">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="3" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/DateTimeAdapter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="34" selection-start="399" selection-end="407" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1286,39 +1304,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerInteractionListener.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#35#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="331" selection-end="331" vertical-scroll-proportion="0.21276596">
+        <state line="12" column="5" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/tmc/BukkitTestUtilities/BukkitTestUtilities/0.1.5-SNAPSHOT/BukkitTestUtilities-0.1.5-SNAPSHOT.jar!/tmc/BukkitTestUtilities/Services/TimeFreezeService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
+        <state line="5" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.13961606">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="3" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+        <state line="82" column="59" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="142" selection-end="148" vertical-scroll-proportion="0.2413793">
+        <state line="19" column="2" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="39" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="38" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#37#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="99" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.5986622">
           <folding />
         </state>
       </provider>

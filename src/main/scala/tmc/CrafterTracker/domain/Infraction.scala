@@ -1,21 +1,20 @@
 package tmc.CrafterTracker.domain
 
-import com.google.gson.annotations.Expose
 
 // Created by cyrus on 5/8/12 at 1:39 PM
 
 trait Infraction {
-  @Expose val penalty: Float
+  val penalty: Float
 }
 
 object Minor extends Infraction {
-  val penalty = 0.1
+  val penalty = 0.1F
 }
 
 object Moderate extends Infraction {
-  val penalty = 0.25
+  val penalty = 0.25F
 }
 
 object Major extends Infraction {
-  val penalty = 0.5
+  val penalty = 0.5F
 }

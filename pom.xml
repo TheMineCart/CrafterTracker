@@ -79,9 +79,7 @@
         <dependency>
             <groupId>tmc.BukkitTestUtilities</groupId>
             <artifactId>BukkitTestUtilities</artifactId>
-            <!--<systemPath>${project.basedir}/lib/BukkitTestUtilities.jar</systemPath>-->
-            <version>0.1.5-SNAPSHOT</version>
-            <!--<scope>system</scope>-->
+            <version>0.1.6-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>
