@@ -5,9 +5,12 @@ import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 import tmc.CrafterTracker.domain.Session
 import tmc.BukkitTestUtilities.Services.RepositoryTest
 import org.joda.time.DateTime
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/4/12 at 2:00 PM
 
+@RunWith(classOf[JUnitRunner])
 class SessionRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   var repository: SessionRepository = null
 

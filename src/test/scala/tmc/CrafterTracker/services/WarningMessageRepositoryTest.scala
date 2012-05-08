@@ -5,9 +5,12 @@ import org.scalatest.{FlatSpec, BeforeAndAfterEach}
 import tmc.CrafterTracker.domain.{Moderate, Major, Minor, WarningMessage}
 import org.joda.time.DateTime
 import tmc.BukkitTestUtilities.Services.{TimeFreezeService, RepositoryTest}
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/8/12 at 1:58 PM
 
+@RunWith(classOf[JUnitRunner])
 class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   val repository: WarningMessageRepository = new WarningMessageRepository(getCollection("WarningMessages"))
 

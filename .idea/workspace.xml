@@ -4,18 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala" line="17" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="Functional programming at its finest">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/InfractionAdapter.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tmc_BukkitTestUtilities_BukkitTestUtilities_0_1_5_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tmc_BukkitTestUtilities_BukkitTestUtilities_0_1_6_SNAPSHOT.xml" />
+    <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/.SessionTest.scala.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/SessionInformationExecutorTest.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrafterTracker.iml" afterPath="$PROJECT_DIR$/CrafterTracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" />
     </list>
     <list id="36589b04-8bf3-4002-9dee-4ca6c20d57ad" name="workspace" comment="" />
     <ignored path="CrafterTracker.iws" />
@@ -94,10 +88,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WarningMessageRepositoryTest.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WarningMessageRepositoryTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="99" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.5986622">
+            <state line="12" column="30" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerInteractionListenerTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="6" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrafterTrackerPluginTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="6" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionRepositoryTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="30" selection-start="404" selection-end="404" vertical-scroll-proportion="0.21276596">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerConnectionListenerTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="712" selection-end="742" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,7 +145,7 @@
       <file leaf-file-name="Infraction.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="2" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+            <state line="18" column="2" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Message.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Session.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala" />
@@ -155,6 +184,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala" />
       </list>
     </option>
   </component>
@@ -261,6 +291,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,6 +331,142 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="builders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SessionBuilder.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -567,52 +743,6 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmc.CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmc.CrafterTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listener" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1101,12 +1231,16 @@
       <created>1336499616116</created>
       <updated>1336499616117</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Ordering all messages by age.">
+      <created>1336507785754</created>
+      <updated>1336507785754</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-5" width="1922" height="1085" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.48824787" order="7" side_tool="false" content_ui="tabs" />
@@ -1124,7 +1258,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19391026" sideWeight="0.357985" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23397435" sideWeight="0.6688103" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19391026" sideWeight="0.6688103" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19391026" sideWeight="0.6688103" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33118972" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1170,7 +1304,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the WarningMessage domain object." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ordering all messages by age." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1200,6 +1334,7 @@
     <MESSAGE value="Discovering map and applying it to the uses of SessionMap." />
     <MESSAGE value="Functional programming at its finest" />
     <MESSAGE value="Creating the WarningMessage domain object." />
+    <MESSAGE value="Ordering all messages by age." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1243,39 +1378,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../craftbukkit-1.2.5-R1.0.jar!/org/bukkit/entity/Player.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="198" selection-start="340" selection-end="340" vertical-scroll-proportion="0.148423" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/bukkit/craftbukkit/1.2.5-R1.0/craftbukkit-1.2.5-R1.0.jar!/org/bukkit/Server.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="24" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.3482143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="61" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/adapters/InfractionAdapter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="391" selection-end="404" vertical-scroll-proportion="0.22371365">
-          <folding>
-            <element signature="e#37#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="194" selection-end="223" vertical-scroll-proportion="0.13087249">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="3" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
@@ -1327,7 +1429,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="2" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+        <state line="18" column="2" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1348,9 +1450,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="712" selection-end="742" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="6" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="6" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="99" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.5986622">
+        <state line="12" column="30" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="30" selection-start="404" selection-end="404" vertical-scroll-proportion="0.21276596">
           <folding />
         </state>
       </provider>
