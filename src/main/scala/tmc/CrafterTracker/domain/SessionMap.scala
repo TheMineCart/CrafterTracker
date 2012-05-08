@@ -24,5 +24,5 @@ class SessionMap {
     sessions = sessions.empty
 
   def applyToSessionFor(playerName: String, function:(Session) => Unit) =
-    sessions.get(playerName).map((session) => function(session))
+    sessions.get(playerName).map(function)
 }
