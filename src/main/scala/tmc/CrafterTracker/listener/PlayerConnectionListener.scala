@@ -19,10 +19,8 @@ class PlayerConnectionListener(sessionRepository: SessionRepository) extends Lis
 
   @EventHandler
   def onPlayerDisconnect(event: PlayerQuitEvent) {
-    SessionMap.get(event.getPlayer.getName).map((session) => {
-      session.disconnected
-      sessionRepository.save(session)
-      SessionMap.remove(event.getPlayer.getName)
-    })
+    SessionMap.applyToSessionFor(event.getPlayer.getName,
+      (s:Session) => { s.disconnected; sessionRepository.save(s) })
+    SessionMap.remove(event.getPlayer.getName)
   }
 }

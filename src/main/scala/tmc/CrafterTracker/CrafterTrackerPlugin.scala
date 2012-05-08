@@ -44,10 +44,8 @@ class CrafterTrackerPlugin extends JavaPlugin {
 
   def tearDownSessionMap(){
     server.getOnlinePlayers.foreach(player => {
-      SessionMap.get(player.getName).map((session) => {
-        session.disconnected
-        sessionRepository.save(session)
-      })
+      SessionMap.applyToSessionFor(player.getName,
+        (s:Session) => { s.disconnected; sessionRepository.save(s) })
     })
     SessionMap.clear()
   }
@@ -58,25 +56,18 @@ class CrafterTrackerPlugin extends JavaPlugin {
     catch {
       case u: UnknownHostException => logger.warning("Something went wrong!")
     }
-
   }
 
-  def initializeDatabase() {
+  def initializeDatabase() =
     crafterTrackerDB = mongoConnection.getDB("CrafterTracker")
-  }
 
-  def initializeRepositories() {
+  def initializeRepositories() =
     sessionRepository = new SessionRepository(crafterTrackerDB.getCollection("Sessions"))
 
-  }
+  def initializeCollectionIndexes() = {}
 
-  def initializeCollectionIndexes() {
-
-  }
-
-  def registerCommandExecutors() {
+  def registerCommandExecutors() =
     getCommand("sessioninfo").setExecutor(new SessionInformationExecutor)
-  }
 
   def registerEventListeners() {
     server.getPluginManager().registerEvents(new PlayerConnectionListener(sessionRepository), this)

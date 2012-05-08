@@ -11,19 +11,18 @@ object SessionMap extends SessionMap {
 class SessionMap {
   var sessions: HashMap[String, Session] = new HashMap[String, Session]
 
-  def get(playerName: String): Option[Session] = {
+  def get(playerName: String): Option[Session] =
     sessions.get(playerName)
-  }
 
-  def put(playerName: String, session: Session) {
+  def put(playerName: String, session: Session) =
     sessions += playerName -> session
-  }
 
-  def remove(playerName: String) {
+  def remove(playerName: String) =
     sessions -= playerName
-  }
 
-  def clear() {
+  def clear() =
     sessions = sessions.empty
-  }
+
+  def applyToSessionFor(playerName: String, function:(Session) => Unit) =
+    sessions.get(playerName).map((session) => function(session))
 }
