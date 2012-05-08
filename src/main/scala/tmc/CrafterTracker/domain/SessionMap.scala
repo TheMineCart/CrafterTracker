@@ -11,10 +11,8 @@ object SessionMap extends SessionMap {
 class SessionMap {
   var sessions: HashMap[String, Session] = new HashMap[String, Session]
 
-  def get(playerName: String): Session = {
-    val session: Option[Session] = sessions.get(playerName)
-    if (session == None) return null
-    session.get
+  def get(playerName: String): Option[Session] = {
+    sessions.get(playerName)
   }
 
   def put(playerName: String, session: Session) {

@@ -1,10 +1,8 @@
 package tmc.CrafterTracker.listener
 
 import org.bukkit.event.{EventHandler, Listener}
-import org.bukkit.Server
-import collection.immutable.HashMap
 import tmc.CrafterTracker.services.SessionRepository
-import org.bukkit.event.player.{PlayerLoginEvent, PlayerQuitEvent, PlayerJoinEvent}
+import org.bukkit.event.player.{PlayerLoginEvent, PlayerQuitEvent}
 import tmc.CrafterTracker.domain.{SessionMap, Session}
 
 // Created by cyrus on 5/1/12 at 2:05 PM
@@ -21,9 +19,10 @@ class PlayerConnectionListener(sessionRepository: SessionRepository) extends Lis
 
   @EventHandler
   def onPlayerDisconnect(event: PlayerQuitEvent) {
-    var session: Session = SessionMap.get(event.getPlayer.getName)
-    session.disconnected
-    sessionRepository.save(session)
-    SessionMap.remove(event.getPlayer.getName)
+    SessionMap.get(event.getPlayer.getName).map((session) => {
+      session.disconnected
+      sessionRepository.save(session)
+      SessionMap.remove(event.getPlayer.getName)
+    })
   }
 }

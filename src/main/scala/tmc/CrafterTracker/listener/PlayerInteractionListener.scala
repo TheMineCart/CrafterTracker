@@ -10,17 +10,18 @@ import tmc.CrafterTracker.domain.SessionMap
 class PlayerInteractionListener extends Listener {
 
   @EventHandler
-  def onBlockBreak(event: BlockBreakEvent) {
+  def onBlockBreak(event: BlockBreakEvent) = {
     val playerName = event.getPlayer.getName
-    if (SessionMap.get(playerName) != null)
-      SessionMap.get(playerName).blockBroken
+    SessionMap.get(playerName).map((session) => {
+      session.blockBroken
+    })
   }
 
   @EventHandler
   def onBlockPlace(event: BlockPlaceEvent) {
     val playerName = event.getPlayer.getName
-    if (SessionMap.get(playerName) != null)
-      SessionMap.get(playerName).blockPlaced
+    SessionMap.get(playerName).map((session) => {
+      session.blockPlaced
+    })
   }
-
 }

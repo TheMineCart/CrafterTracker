@@ -36,7 +36,7 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
     plugin.setupSessionMap()
 
     SessionMap.sessions.size should equal (2)
-    SessionMap.get("Sam").connectedAt should equal (new DateTime)
+    SessionMap.get("Sam").get.connectedAt should equal (new DateTime)
     TimeFreezeService.unfreeze()
   }
 

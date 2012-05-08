@@ -44,9 +44,10 @@ class CrafterTrackerPlugin extends JavaPlugin {
 
   def tearDownSessionMap(){
     server.getOnlinePlayers.foreach(player => {
-      val session: Session = SessionMap.get(player.getName)
-      session.disconnected
-      sessionRepository.save(session)
+      SessionMap.get(player.getName).map((session) => {
+        session.disconnected
+        sessionRepository.save(session)
+      })
     })
     SessionMap.clear()
   }

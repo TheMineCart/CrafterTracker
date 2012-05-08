@@ -25,9 +25,9 @@ class PlayerInteractionListenerTest extends FlatSpec with ShouldMatchers with Be
     SessionMap.put("Jason", session)
     val event = new BlockBreakEvent(new TestBlock(1, 2, 3), new TestPlayer("Jason"))
 
-    SessionMap.get("Jason").blocksBroken should equal(0)
+    SessionMap.get("Jason").get.blocksBroken should equal(0)
     listener.onBlockBreak(event)
-    SessionMap.get("Jason").blocksBroken should equal(1)
+    SessionMap.get("Jason").get.blocksBroken should equal(1)
   }
 
   "The listener" should "not expload when a BlockBreakEvent is fired by a player who doesn't have a session" in {
@@ -43,9 +43,9 @@ class PlayerInteractionListenerTest extends FlatSpec with ShouldMatchers with Be
     val event = new BlockPlaceEvent(new TestBlock(1, 2, 3), new TestBlockState(Material.AIR),
       null, null, new TestPlayer("Jason"), true)
 
-    SessionMap.get("Jason").blocksPlaced should equal(0)
+    SessionMap.get("Jason").get.blocksPlaced should equal(0)
     listener.onBlockPlace(event)
-    SessionMap.get("Jason").blocksPlaced should equal(1)
+    SessionMap.get("Jason").get.blocksPlaced should equal(1)
   }
 
   "The listener" should "not expload when a BlockPlaceEvent is fired by a player who doesn't have a session" in {
