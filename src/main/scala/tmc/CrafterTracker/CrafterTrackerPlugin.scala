@@ -90,7 +90,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
   def initializeCollectionIndexes() = {}
 
   def registerCommandExecutors() = {
-    getCommand("playerinfo").setExecutor(new SessionInformationExecutor)
+    getCommand("sessioninfo").setExecutor(new SessionInformationExecutor())
     getCommand("warn").setExecutor(new WarningExecutor(server, playerRepository, warningMessageRepository))
   }
 
