@@ -1,6 +1,6 @@
 package tmc.CrafterTracker
 
-import domain.{Session, SessionMap}
+import domain.{Player, Session, SessionMap}
 import executors.SessionInformationExecutor
 import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
@@ -9,6 +9,7 @@ import java.util.logging.Logger
 import java.rmi.UnknownHostException
 import com.mongodb.{DB, Mongo}
 import services.{PlayerRepository, SessionRepository}
+import org.joda.time.Minutes
 
 // Created by cyrus on 5/1/12 at 10:18 AM
 
@@ -30,25 +31,42 @@ class CrafterTrackerPlugin extends JavaPlugin {
     initializeCollectionIndexes()
     registerCommandExecutors()
     registerEventListeners()
-    setupSessionMap()
+    setUpSessions()
   }
 
   override def onDisable() {
-    tearDownSessionMap()
+    tearDownSessions()
   }
 
-  def setupSessionMap() {
+  def setUpSessions() {
     server.getOnlinePlayers.foreach(player => {
       SessionMap.put(player.getName, new Session(player.getName, player.getAddress.toString))
+      persistIfNewPlayer(player.getName)
     })
   }
 
-  def tearDownSessionMap(){
+  private def persistIfNewPlayer(playerName: String) {
+    if (!playerRepository.exists(playerName)) {
+      playerRepository.save(new Player(playerName))
+    }
+  }
+
+  def tearDownSessions() {
     server.getOnlinePlayers.foreach(player => {
       SessionMap.applyToSessionFor(player.getName,
-        (s:Session) => { s.disconnected; sessionRepository.save(s) })
+        (s: Session) => { s.disconnected; sessionRepository.save(s); playerRepository.save(updatePlayerStatistics(s))}
+      )
     })
     SessionMap.clear()
+  }
+
+  private def updatePlayerStatistics(s: Session): Player = {
+    val persistedPlayer = playerRepository.findByPlayerName(s.username)
+    persistedPlayer.addBroken(s.blocksBroken)
+    persistedPlayer.addPlaced(s.blocksPlaced)
+    persistedPlayer.addMinutesPlayed(Minutes.minutesBetween(s.connectedAt, s.disconnectedAt).getMinutes)
+    persistedPlayer.calculateScore
+    persistedPlayer
   }
 
   def initializeMongoDB() {
