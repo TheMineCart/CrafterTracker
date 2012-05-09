@@ -4,7 +4,6 @@ import org.bukkit.command.{Command, CommandSender, CommandExecutor}
 import tmc.CrafterTracker.domain.{Session, SessionMap}
 import org.bukkit.entity.Player
 
-
 // Created by cyrus on 5/3/12 at 3:28 PM
 
 class SessionInformationExecutor extends CommandExecutor {

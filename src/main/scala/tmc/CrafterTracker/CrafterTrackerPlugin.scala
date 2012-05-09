@@ -1,15 +1,15 @@
 package tmc.CrafterTracker
 
 import domain.{Player, Session, SessionMap}
-import executors.SessionInformationExecutor
+import executors.{WarningExecutor, SessionInformationExecutor}
 import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.Server
 import java.util.logging.Logger
 import java.rmi.UnknownHostException
 import com.mongodb.{DB, Mongo}
-import services.{PlayerRepository, SessionRepository}
 import org.joda.time.Minutes
+import services.{WarningMessageRepository, PlayerRepository, SessionRepository}
 
 // Created by cyrus on 5/1/12 at 10:18 AM
 
@@ -19,6 +19,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
   var logger: Logger = null
   var sessionRepository: SessionRepository = null
   var playerRepository: PlayerRepository = null
+  var warningMessageRepository: WarningMessageRepository = null
   var mongoConnection: Mongo = null
   var crafterTrackerDB: DB = null
 
@@ -83,16 +84,18 @@ class CrafterTrackerPlugin extends JavaPlugin {
   def initializeRepositories() {
     sessionRepository = new SessionRepository(crafterTrackerDB.getCollection("Sessions"))
     playerRepository = new PlayerRepository(crafterTrackerDB.getCollection("Players"))
+    warningMessageRepository = new WarningMessageRepository(crafterTrackerDB.getCollection("WarningMessages"))
   }
 
   def initializeCollectionIndexes() = {}
 
-  def registerCommandExecutors() =
+  def registerCommandExecutors() = {
     getCommand("playerinfo").setExecutor(new SessionInformationExecutor)
+    getCommand("warn").setExecutor(new WarningExecutor(server, playerRepository, warningMessageRepository))
+  }
 
   def registerEventListeners() {
     server.getPluginManager().registerEvents(new PlayerConnectionListener(sessionRepository, playerRepository), this)
     server.getPluginManager().registerEvents(new PlayerInteractionListener, this)
   }
-
 }

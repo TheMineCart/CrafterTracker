@@ -48,9 +48,6 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
 
     result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor"))
     result should equal (false)
-
-    result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "a message", "way too many arguments"))
-    result should equal (false)
   }
 
   it should "return true if the command sender is not Op and the number of arguments is incorrect" in {
@@ -59,8 +56,15 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
   }
 
   it should "return true if there are the correct number of arguments" in {
-    val result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "a message"))
+    playerRepository.save(new Player("Sam"))
+    playerRepository.save(new Player("Jason"))
+
+    var result = executor.onCommand(adminPlayer, null, "warn", Array("Sam", "minor", "a message"))
     result should equal (true)
+
+    result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "This", "message", "makes", "more", "than", "3", "arguments."))
+    result should equal (true)
+    warningRepository.findByPlayerName("Jason")(0).text should equal ("This message makes more than 3 arguments.")
   }
 
   it should "prevent a non admin player from creating a warning" in {

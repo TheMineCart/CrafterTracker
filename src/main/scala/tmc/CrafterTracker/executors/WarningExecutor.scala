@@ -8,7 +8,7 @@ import tmc.CrafterTracker.domain._
 
 // Created by cyrus on 5/9/12 at 1:10 PM
 
-class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageRepository) extends CommandExecutor{
+class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageRepository) extends CommandExecutor {
   val server: Server = s
   val playerRepository: PlayerRepository = pR
   val warningMessageRepository: WarningMessageRepository = wMR
@@ -18,7 +18,7 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
       commandSender.sendMessage("You do not have access to that command!")
       return true
     }
-    if (args.length != 3) {
+    if (args.length < 3) {
       return false
     }
     if (!playerRepository.exists(args(0))) {
@@ -32,7 +32,8 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
     }
 
     val player = playerRepository.findByPlayerName(args(0))
-    val warning = new WarningMessage(commandSender.getName, args(0), args(2), matchInfraction(args(1)).get, player.score)
+    val message: String = args.slice(2, args.length).mkString(" ")
+    val warning = new WarningMessage(commandSender.getName, args(0), message, matchInfraction(args(1)).get, player.score)
 
     player.addPenaltyScore(warning.score)
     player.calculateScore
