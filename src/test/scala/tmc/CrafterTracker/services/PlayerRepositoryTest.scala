@@ -6,9 +6,12 @@ import org.scalatest.BeforeAndAfterEach
 import tmc.CrafterTracker.domain.Player
 import tmc.BukkitTestUtilities.Services.{TimeFreezeService, RepositoryTest}
 import org.joda.time.DateTime
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/9/12 at 9:48 AM
 
+@RunWith(classOf[JUnitRunner])
 class PlayerRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   var repository: PlayerRepository = null
 

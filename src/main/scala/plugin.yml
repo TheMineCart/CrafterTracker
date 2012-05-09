@@ -7,3 +7,7 @@ commands:
     description: Display your session info.
     permissions: CrafterTracker.sessioninfo
     usage: /<command>
+  warn:
+    description: Warn a user
+    permissions: CrafterTracker.warn
+    usage: /<command> [player] [severity] [message]

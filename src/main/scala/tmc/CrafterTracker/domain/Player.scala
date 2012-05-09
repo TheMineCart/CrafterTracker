@@ -12,7 +12,7 @@ class Player(name: String) {
   var minutesPlayed : Long = 0
   var blocksPlaced: Int = 0
   var blocksBroken: Int = 0
-  var penaltyScore : Int = 0
+  var penaltyScore : Long = 0
   var score : Long = 0
 
   def addMinutesPlayed(minutes: Long) {
@@ -36,7 +36,7 @@ class Player(name: String) {
     }
   }
 
-  def addPenaltyScore(score: Int) {
+  def addPenaltyScore(score: Long) {
     score >= 0 match {
       case true => penaltyScore += score
       case false => throw new IllegalArgumentException("Penalty score must be greater than or equal to 0")
@@ -44,7 +44,6 @@ class Player(name: String) {
   }
 
   def calculateScore {
-    println(Days.daysBetween(new DateTime(), joinedOn).getDays)
     score = ((minutesPlayed/(1 + Days.daysBetween(new DateTime, joinedOn).getDays)) * (blocksPlaced + blocksBroken)) - penaltyScore
   }
 }
