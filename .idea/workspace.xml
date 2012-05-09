@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/PlayerTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/PlayerRepository.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/PlayerRepositoryTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="36589b04-8bf3-4002-9dee-4ca6c20d57ad" name="workspace" comment="" />
@@ -66,6 +66,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="PlayerRepository.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/PlayerRepository.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="19" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#37#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerRepositoryTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/PlayerRepositoryTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="8" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.26421404">
+              <folding>
+                <element signature="e#37#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WarningMessageRepository.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,28 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WarningMessageRepositoryTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala">
+      <file leaf-file-name="SessionRepository.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="30" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerInteractionListenerTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="6" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrafterTrackerPluginTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+            <state line="23" column="8" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,56 +111,7 @@
       <file leaf-file-name="SessionRepositoryTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="2" selection-start="374" selection-end="405" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/PlayerTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#35#92#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionInformationExecutor.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/SessionTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#35#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.107279696">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerConnectionListenerTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="712" selection-end="742" vertical-scroll-proportion="0.0">
+            <state line="17" column="2" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerInteractionListener.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala" />
@@ -196,6 +149,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/PlayerTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/PlayerRepository.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/PlayerRepositoryTest.scala" />
       </list>
     </option>
   </component>
@@ -241,7 +196,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="1919" />
     <option name="y" value="-5" />
     <option name="width" value="1922" />
     <option name="height" value="1085" />
@@ -799,27 +754,6 @@
     </key>
   </component>
   <component name="RunManager" selected="ScalaTest.All Tests">
-    <configuration default="false" name="PlayerTest.A Player should not be able to increase the number of blocks placed by a negative number" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tmc.CrafterTracker.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="scalaCoverage" />
-      <module name="CrafterTracker" />
-      <setting name="path" value="tmc.CrafterTracker.domain.PlayerTest" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="A Player should not be able to increase the number of blocks placed by a negative number" />
-      <setting name="testKind" value="Test name" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="PlayerTest.A Player should initially have no penalties" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -900,6 +834,27 @@
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="A Player should have an initial score of 0" />
       <setting name="testKind" value="Test name" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PlayerRepositoryTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tmc.CrafterTracker.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="scalaCoverage" />
+      <module name="CrafterTracker" />
+      <setting name="path" value="tmc.CrafterTracker.services.PlayerRepositoryTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -1149,11 +1104,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="ScalaTest.All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should not be able to increase the number of blocks placed by a negative number" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should initially have no penalties" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should be able to have penalties added" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should not be able to add a negative penalty" />
-      <item index="5" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should have an initial score of 0" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should initially have no penalties" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should be able to have penalties added" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should not be able to add a negative penalty" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.PlayerTest.A Player should have an initial score of 0" />
+      <item index="5" class="java.lang.String" itemvalue="ScalaTest.PlayerRepositoryTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1275,12 +1230,16 @@
       <created>1336507978931</created>
       <updated>1336507978931</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added Player class and associated tests.">
+      <created>1336514704813</created>
+      <updated>1336514704813</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-5" width="1922" height="1085" extended-state="6" />
-    <editor active="false" />
+    <frame x="1919" y="-5" width="1922" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.48824787" order="7" side_tool="false" content_ui="tabs" />
@@ -1296,7 +1255,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23794213" sideWeight="0.46741453" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19391026" sideWeight="0.357985" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23397435" sideWeight="0.6688103" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23397435" sideWeight="0.6688103" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19391026" sideWeight="0.6688103" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33118972" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
@@ -1344,7 +1303,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making sure more tests run with maven." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Player class and associated tests." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1376,6 +1335,7 @@
     <MESSAGE value="Creating the WarningMessage domain object." />
     <MESSAGE value="Ordering all messages by age." />
     <MESSAGE value="Making sure more tests run with maven." />
+    <MESSAGE value="Added Player class and associated tests." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1419,34 +1379,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="9" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerInteractionListener.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tmc/BukkitTestUtilities/BukkitTestUtilities/0.1.5-SNAPSHOT/BukkitTestUtilities-0.1.5-SNAPSHOT.jar!/tmc/BukkitTestUtilities/Services/TimeFreezeService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.13961606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="59" selection-start="3083" selection-end="3083" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="2" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
@@ -1457,22 +1389,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="39" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="38" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#37#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="712" selection-end="742" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1498,13 +1414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/SessionTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="6" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
@@ -1514,26 +1423,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="2" selection-start="374" selection-end="405" vertical-scroll-proportion="0.0">
+        <state line="3" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="10" selection-start="590" selection-end="590" vertical-scroll-proportion="0.50167227">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/domain/PlayerTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
+        <state line="31" column="30" selection-start="941" selection-end="941" vertical-scroll-proportion="0.35117057">
           <folding>
             <element signature="e#35#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.107279696">
+        <state line="18" column="0" selection-start="712" selection-end="742" vertical-scroll-proportion="0.2006689">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/SessionRepositoryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="2" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/WarningMessageRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="38" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#37#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/2.7.3/mongo-java-driver-2.7.3.jar!/com/mongodb/DBCollection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="35" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.3482143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/PlayerRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="19" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#37#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/PlayerRepositoryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="8" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.26421404">
+          <folding>
+            <element signature="e#37#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
