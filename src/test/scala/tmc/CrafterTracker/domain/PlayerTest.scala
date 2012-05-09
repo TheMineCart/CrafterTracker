@@ -85,5 +85,18 @@ class PlayerTest extends FlatSpec with ShouldMatchers with BeforeAndAfterEach {
     player.score should equal(0)
   }
 
-  ignore should "be able to calculate its score" in {}
+  it should "be able to calculate its score for a player who joined for the first time 60 minutes ago" in {
+    val now = DateTime.parse("2012-04-26T12:00:00.000-04:00")
+    TimeFreezeService.freeze(now)
+    player.joinedOn = now
+    player.addBroken(1000)
+    player.addPlaced(1000)
+    player.addMinutesPlayed(60)
+    player.penaltyScore = 5000
+
+    TimeFreezeService.freeze(now.plusMinutes(60))
+    player.calculateScore
+
+    player.score should equal(115000)
+  }
 }
