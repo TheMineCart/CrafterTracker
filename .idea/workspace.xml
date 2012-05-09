@@ -4,10 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala" line="17" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="Covering the case where player are online during a server reload.  Persists any new players who are online during the initial plugin load.">
+    <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="Covering the case where an admin enters an invalid infraction when executing the warn command.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
     </list>
     <list id="36589b04-8bf3-4002-9dee-4ca6c20d57ad" name="workspace" comment="" />
     <ignored path="CrafterTracker.iws" />
@@ -66,10 +66,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WarningExecutor.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WarningExecutor.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="31" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
+            <state line="26" column="25" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.46524063">
               <folding />
             </state>
           </provider>
@@ -78,7 +78,7 @@
       <file leaf-file-name="WarningExecutorTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="3" selection-start="4115" selection-end="4115" vertical-scroll-proportion="-17.32">
+            <state line="89" column="71" selection-start="3667" selection-end="3799" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#38#92#0" expanded="true" />
               </folding>
@@ -113,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrafterTrackerPlugin.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CrafterTrackerPlugin.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.44947734">
+            <state line="40" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#28#71#0" expanded="true" />
               </folding>
@@ -173,11 +173,11 @@
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/PlayerRepositoryTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/services/WarningMessageRepositoryTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
       </list>
     </option>
   </component>
@@ -1207,7 +1207,11 @@
       <created>1336593976710</created>
       <updated>1336593976710</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Covering the case where players are online during a server reload.  It now updates each player's statistics.  Persists any new players who are online during the initial plugin load.">
+      <created>1336596581945</created>
+      <updated>1336596581945</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1276,7 +1280,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added WarningExecutor so that admins can create warning messages for players." />
+    <option name="LAST_COMMIT_MESSAGE" value="Covering the case where players are online during a server reload.  It now updates each player's statistics.  Persists any new players who are online during the initial plugin load." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1312,6 +1316,7 @@
     <MESSAGE value="Added PlayerRepository so that we can save a player." />
     <MESSAGE value="Managing Player data during connect and disconnect events.  Calculating a score each time a player disconnects." />
     <MESSAGE value="Added WarningExecutor so that admins can create warning messages for players." />
+    <MESSAGE value="Covering the case where players are online during a server reload.  It now updates each player's statistics.  Persists any new players who are online during the initial plugin load." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1402,22 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="3" selection-start="4115" selection-end="4115" vertical-scroll-proportion="-17.32">
-          <folding>
-            <element signature="e#38#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="10" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
@@ -1464,10 +1453,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.44947734">
+        <state line="40" column="14" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#28#71#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="71" selection-start="3667" selection-end="3799" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#38#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="25" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.46524063">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -81,6 +81,15 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
                                            "Jason" + ChatColor.WHITE + ". Please double check your spelling.")
   }
 
+  it should "not create a new warning message if the second parameter does not match any Infractions" in {
+    playerRepository.save(new Player("Jason"))
+    val result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "junk", "You have been a bad player."))
+
+    result should equal (true)
+    adminPlayer.getMessage() should equal ("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
+      "junk" + ChatColor.WHITE + ". Please double check your spelling.")
+  }
+
   //The Happy Path
   it should "create a new warning and save it to the database and update the user's penalty score" in {
     val goodJason = new Player("Jason")
@@ -88,7 +97,6 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     goodJason.addPlaced(100)
     goodJason.addMinutesPlayed(60)
     goodJason.calculateScore
-    println(goodJason.score)
     playerRepository.save(goodJason)
 
     warningRepository.findByPlayerName("Jason").size should equal(0)

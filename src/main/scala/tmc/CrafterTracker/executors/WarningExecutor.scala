@@ -16,18 +16,23 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
   override def onCommand(commandSender: CommandSender, command: Command, commandName: String, args: Array[String]): Boolean = {
     if (!commandSender.isOp) {
       commandSender.sendMessage("You do not have access to that command!")
-      return true;
+      return true
     }
     if (args.length != 3) {
-      return false;
+      return false
     }
     if (!playerRepository.exists(args(0))) {
       commandSender.sendMessage("Could not find player " + ChatColor.DARK_PURPLE + args(0) + ChatColor.WHITE + ". Please double check your spelling.")
-      return true;
+      return true
+    }
+    if (matchInfraction(args(1)) == None) {
+      commandSender.sendMessage("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
+                                args(1) + ChatColor.WHITE + ". Please double check your spelling.")
+      return true
     }
 
     val player = playerRepository.findByPlayerName(args(0))
-    val warning = buildWarningMessage(commandSender.getName, args, player.score)
+    val warning = new WarningMessage(commandSender.getName, args(0), args(2), matchInfraction(args(1)).get, player.score)
 
     player.addPenaltyScore(warning.score)
     player.calculateScore
@@ -38,13 +43,12 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
     true
   }
 
-  private def buildWarningMessage(sender: String, args: Array[String], playerScore: Long): WarningMessage = {
-    var infraction: Infraction = null
-    args(1).toUpperCase match {
-      case "MINOR" => infraction = Minor
-      case "MODERATE" => infraction = Moderate
-      case "MAJOR" => infraction = Major
+  private def matchInfraction(infraction: String): Option[Infraction] = {
+    infraction.toUpperCase match {
+      case "MINOR" => Some(Minor)
+      case "MODERATE" => Some(Moderate)
+      case "MAJOR" => Some(Major)
+      case _ => None
     }
-    new WarningMessage(sender, args(0), args(2), infraction, playerScore)
   }
 }
