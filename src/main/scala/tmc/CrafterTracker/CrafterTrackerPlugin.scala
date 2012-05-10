@@ -41,7 +41,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
 
   def setUpSessions() {
     server.getOnlinePlayers.foreach(player => {
-      SessionMap.put(player.getName, new Session(player.getName, player.getAddress.toString))
+      SessionMap.put(player.getName, new Session(player.getName, player.getAddress.getAddress.toString))
       persistIfNewPlayer(player.getName)
     })
   }

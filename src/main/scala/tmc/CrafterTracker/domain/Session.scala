@@ -6,7 +6,7 @@ import com.google.gson.annotations.Expose
 
 class Session(u: String, a: String) {
   @Expose val username: String = u;
-  @Expose val ipAddress: String = a
+  @Expose val ipAddress: String = a.stripPrefix("/")
   @Expose var blocksBroken: Int = 0;
   @Expose var blocksPlaced: Int = 0;
   @Expose var connectedAt: DateTime = new DateTime;
