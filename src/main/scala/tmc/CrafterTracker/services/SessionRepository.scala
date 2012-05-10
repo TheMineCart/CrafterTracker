@@ -16,8 +16,8 @@ object SessionRepository {
   val gson = new GsonBuilder().registerTypeAdapter(classOf[DateTime], DateTimeAdapter).create
 
   def save(session: Session) {
-   val sessionObject = JSON.parse(gson.toJson(session, classOf[Session])).asInstanceOf[DBObject]
-   collection.insert(sessionObject)
+    val sessionObject = JSON.parse(gson.toJson(session, classOf[Session])).asInstanceOf[DBObject]
+    collection.insert(sessionObject)
   }
 
   def findByPlayerName(playerName: String): List[Session] = {

@@ -21,4 +21,8 @@ object SessionMap {
 
   def applyToSessionFor(playerName: String, function:(Session) => Unit) =
     sessions.get(playerName).map(function)
+
+  def size(): Int = {
+    sessions.size
+  }
 }

@@ -12,6 +12,7 @@ import services.{PlayerRepository, SessionRepository}
 class CrafterTrackerPlugin extends JavaPlugin {
 
   override def onEnable() {
+    CtPlugin.plugin = this
     CtPlugin.server = getServer
     CtPlugin.logger = getLogger
     registerCommandExecutors()
