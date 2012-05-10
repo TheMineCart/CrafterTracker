@@ -14,7 +14,7 @@ import tmc.BukkitTestUtilities.Mocks.{TestBlock, TestBlockState, TestPlayer}
 
 @RunWith(classOf[JUnitRunner])
 class PlayerInteractionListenerTest extends FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  val listener: PlayerInteractionListener = new PlayerInteractionListener()
+  val listener = PlayerInteractionListener
 
   override def afterEach() {
     SessionMap.clear()

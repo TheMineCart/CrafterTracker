@@ -7,7 +7,7 @@ import tmc.CrafterTracker.domain.{Session, SessionMap}
 
 // Created by cyrus on 5/3/12 at 11:54 AM
 
-class PlayerInteractionListener extends Listener {
+object PlayerInteractionListener extends Listener {
 
   @EventHandler
   def onBlockBreak(event: BlockBreakEvent) =

@@ -23,11 +23,9 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
   var sessionRepository = SessionRepository
   PlayerRepository.collection = getCollection("Players")
   var playerRepository = PlayerRepository
-  var playerConnectionListener: PlayerConnectionListener = null
   var jason: BukkitPlayer = null
 
   override def beforeEach() {
-    playerConnectionListener = new PlayerConnectionListener
     jason = new TestPlayer("Jason")
   }
 
@@ -37,7 +35,7 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
 
   "The listener" should "add a session to the sessions map when a player joins" in {
     val event = new PlayerLoginEvent(jason, "some host", InetAddress.getLocalHost)
-    playerConnectionListener.onPlayerConnect(event)
+    PlayerConnectionListener.onPlayerConnect(event)
     SessionMap.sessions.size should equal (1)
   }
 
@@ -47,7 +45,7 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
     sessionRepository.count should equal (0)
 
     val event = new PlayerQuitEvent(jason, "I quit.")
-    playerConnectionListener.onPlayerDisconnect(event)
+    PlayerConnectionListener.onPlayerDisconnect(event)
 
     sessionRepository.count should equal (1)
 
@@ -65,7 +63,7 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
     TimeFreezeService.freeze(now)
 
     val event = new PlayerLoginEvent(jason, "some host", InetAddress.getLocalHost)
-    playerConnectionListener.onPlayerConnect(event)
+    PlayerConnectionListener.onPlayerConnect(event)
 
     TimeFreezeService.unfreeze()
 
@@ -79,12 +77,12 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
     val now = new DateTime()
     TimeFreezeService.freeze(now)
     val firstEvent = new PlayerLoginEvent(jason, "some host", InetAddress.getLocalHost)
-    playerConnectionListener.onPlayerConnect(firstEvent)
+    PlayerConnectionListener.onPlayerConnect(firstEvent)
     TimeFreezeService.unfreeze()
 
     TimeFreezeService.freeze(now.plusDays(1))
     val secondEvent = new PlayerLoginEvent(jason, "some host", InetAddress.getLocalHost)
-    playerConnectionListener.onPlayerConnect(secondEvent)
+    PlayerConnectionListener.onPlayerConnect(secondEvent)
     TimeFreezeService.unfreeze()
 
     val newJason = playerRepository.findByPlayerName("Jason")
@@ -102,7 +100,7 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
 
     TimeFreezeService.freeze(now.plusHours(1))
     val event = new PlayerQuitEvent(jason, "Leaving the server")
-    playerConnectionListener.onPlayerDisconnect(event)
+    PlayerConnectionListener.onPlayerDisconnect(event)
     TimeFreezeService.unfreeze()
 
     val newJason = playerRepository.findByPlayerName("Jason")
@@ -116,7 +114,7 @@ class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with Sho
     SessionMap.put("Jason", new Session("Jason", InetAddress.getLocalHost.toString))
 
     val event = new PlayerQuitEvent(jason, "Leaving the server")
-    playerConnectionListener.onPlayerDisconnect(event)
+    PlayerConnectionListener.onPlayerDisconnect(event)
 
     playerRepository.exists("Jason") should equal (false)
     SessionMap.get("Jason") should equal (None)

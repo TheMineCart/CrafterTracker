@@ -55,12 +55,12 @@ class CrafterTrackerPlugin extends JavaPlugin {
   }
 
   def registerCommandExecutors() = {
-    getCommand("sessioninfo").setExecutor(new SessionInformationExecutor())
-    getCommand("warn").setExecutor(new WarningExecutor)
+    getCommand("sessioninfo").setExecutor(SessionInformationExecutor)
+    getCommand("warn").setExecutor(WarningExecutor)
   }
 
   def registerEventListeners() {
-    CtPlugin.server.getPluginManager.registerEvents(new PlayerConnectionListener, this)
-    CtPlugin.server.getPluginManager.registerEvents(new PlayerInteractionListener, this)
+    CtPlugin.server.getPluginManager.registerEvents(PlayerConnectionListener, this)
+    CtPlugin.server.getPluginManager.registerEvents(PlayerInteractionListener, this)
   }
 }

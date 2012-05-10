@@ -13,14 +13,13 @@ import tmc.BukkitTestUtilities.Services.{RepositoryTest, TimeFreezeService}
 // Created by cyrus on 5/4/12 at 10:21 AM
 @RunWith(classOf[JUnitRunner])
 class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  var plugin: CrafterTrackerPlugin = null
+  val plugin = new CrafterTrackerPlugin
   var testServer: TestServer = null
 
   override def beforeEach() {
     testServer = new TestServer
     CtPlugin.server = testServer
 
-    plugin = new CrafterTrackerPlugin
     SessionRepository.collection = getCollection("Sessions")
     PlayerRepository.collection = getCollection("Players")
   }

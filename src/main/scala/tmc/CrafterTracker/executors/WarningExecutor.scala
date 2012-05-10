@@ -8,7 +8,8 @@ import tmc.CrafterTracker.domain._
 
 // Created by cyrus on 5/9/12 at 1:10 PM
 
-class WarningExecutor extends CommandExecutor {
+object WarningExecutor extends CommandExecutor {
+
   override def onCommand(commandSender: CommandSender, command: Command, commandName: String, args: Array[String]): Boolean = {
     if (!commandSender.isOp) {
       commandSender.sendMessage("You do not have access to that command!")

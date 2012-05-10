@@ -7,7 +7,7 @@ import org.bukkit.ChatColor
 
 // Created by cyrus on 5/3/12 at 3:28 PM
 
-class SessionInformationExecutor extends CommandExecutor {
+object SessionInformationExecutor extends CommandExecutor {
 
   override def onCommand(sender: CommandSender, command: Command, s: String, args: Array[String]): Boolean = {
     val player: Player = sender.getServer.getPlayer(sender.getName)

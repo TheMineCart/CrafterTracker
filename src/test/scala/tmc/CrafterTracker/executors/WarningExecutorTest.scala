@@ -20,7 +20,6 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
   PlayerRepository.collection = getCollection("Players")
   val playerRepository = PlayerRepository
 
-  var executor: WarningExecutor = null
   var server: TestServer = null
   var nonAdminPlayer: TestPlayer = null
   var adminPlayer: TestPlayer = null
@@ -33,8 +32,6 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     adminPlayer = new TestPlayer()
     adminPlayer.setOp(true)
     server.addOnlinePlayer(adminPlayer)
-
-    executor = new WarningExecutor
   }
 
   override def afterEach() {
@@ -42,18 +39,18 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
   }
 
   it should "return false if there are an incorrect number of arguments" in {
-    var result = executor.onCommand(adminPlayer, null, "warn", Array())
+    var result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array())
     result should equal (false)
 
-    result = executor.onCommand(adminPlayer, null, "warn", Array("Jason"))
+    result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason"))
     result should equal (false)
 
-    result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor"))
+    result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor"))
     result should equal (false)
   }
 
   it should "return true if the command sender is not Op and the number of arguments is incorrect" in {
-    var result = executor.onCommand(nonAdminPlayer, null, "warn", Array())
+    var result = WarningExecutor.onCommand(nonAdminPlayer, null, "warn", Array())
     result should equal (true)
   }
 
@@ -61,10 +58,10 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     playerRepository.save(new Player("Sam"))
     playerRepository.save(new Player("Jason"))
 
-    var result = executor.onCommand(adminPlayer, null, "warn", Array("Sam", "minor", "a message"))
+    var result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Sam", "minor", "a message"))
     result should equal (true)
 
-    result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "This", "message", "makes", "more", "than", "3", "arguments."))
+    result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "This", "message", "makes", "more", "than", "3", "arguments."))
     result should equal (true)
     warningRepository.findByPlayerName("Jason")(0).text should equal ("This message makes more than 3 arguments.")
   }
@@ -72,7 +69,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
   it should "prevent a non admin player from creating a warning" in {
     playerRepository.save(new Player("Jason"))
 
-    val result = executor.onCommand(nonAdminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player."))
+    val result = WarningExecutor.onCommand(nonAdminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player."))
 
     nonAdminPlayer.getMessage() should equal ("You do not have access to that command!")
     result should equal (true)
@@ -80,7 +77,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
   }
 
   it should "validate that the player exists in the database" in {
-    val result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player."))
+    val result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player."))
 
     result should equal (true)
     adminPlayer.getMessage() should equal ("Could not find player " + ChatColor.DARK_PURPLE + "" +
@@ -89,7 +86,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
 
   it should "not create a new warning message if the second parameter does not match any Infractions" in {
     playerRepository.save(new Player("Jason"))
-    val result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "junk", "You have been a bad player."))
+    val result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "junk", "You have been a bad player."))
 
     result should equal (true)
     adminPlayer.getMessage() should equal ("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
@@ -107,7 +104,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
 
     warningRepository.findByPlayerName("Jason").size should equal(0)
 
-    val result = executor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player.") )
+    val result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player.") )
 
     result should equal (true)
     warningRepository.findByPlayerName("Jason").size should equal(1)

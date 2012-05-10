@@ -8,7 +8,7 @@ import org.joda.time.Minutes
 
 // Created by cyrus on 5/1/12 at 2:05 PM
 
-class PlayerConnectionListener extends Listener {
+object PlayerConnectionListener extends Listener {
 
   @EventHandler
   def onPlayerConnect(event: PlayerLoginEvent) {
