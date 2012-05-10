@@ -41,6 +41,8 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
     warningMessageRepository.save(warning)
     playerRepository.save(player)
 
+    commandSender.sendMessage("Successfully sent warning to " + ChatColor.DARK_PURPLE + args(0) + ChatColor.WHITE + ".")
+
     true
   }
 

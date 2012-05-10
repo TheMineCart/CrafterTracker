@@ -113,6 +113,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     val badJason = playerRepository.findByPlayerName("Jason")
     badJason.penaltyScore should equal (1200)
     badJason.score should equal (10800)
+    adminPlayer.getMessage should equal ("Successfully sent warning to " + ChatColor.DARK_PURPLE + "Jason" + ChatColor.WHITE + ".")
   }
 
 }
