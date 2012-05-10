@@ -6,12 +6,14 @@ import org.joda.time.DateTime
 import com.mongodb.util.JSON
 import tmc.CrafterTracker.domain.Player
 import com.mongodb.{BasicDBObject, DBObject, DBCollection}
+import tmc.CrafterTracker.Database
 
 // Created by cyrus on 5/9/12 at 9:44 AM
 
-class PlayerRepository(c: DBCollection) {
-  val collection: DBCollection = c
-  val gson = new GsonBuilder().registerTypeAdapter(classOf[DateTime], new DateTimeAdapter).create
+object PlayerRepository {
+
+  var collection: DBCollection = Database.db.getCollection("Players")
+  val gson = new GsonBuilder().registerTypeAdapter(classOf[DateTime], DateTimeAdapter).create
 
   def save(player: Player) {
     val playerObject = JSON.parse(gson.toJson(player, classOf[Player])).asInstanceOf[DBObject]

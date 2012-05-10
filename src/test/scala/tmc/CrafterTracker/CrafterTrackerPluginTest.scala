@@ -17,11 +17,12 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
   var testServer: TestServer = null
 
   override def beforeEach() {
-    plugin = new CrafterTrackerPlugin
     testServer = new TestServer
-    plugin.server = testServer
-    plugin.sessionRepository = new SessionRepository(getCollection("Sessions"))
-    plugin.playerRepository = new PlayerRepository(getCollection("Players"))
+    CtPlugin.server = testServer
+
+    plugin = new CrafterTrackerPlugin
+    SessionRepository.collection = getCollection("Sessions")
+    PlayerRepository.collection = getCollection("Players")
   }
 
   override def afterEach() {
@@ -42,16 +43,16 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
   }
   
   it should "persist players if it reloads while there are connected players who have not been persisted" in {
-    plugin.playerRepository.count should equal (0)
+    PlayerRepository.count should equal (0)
     testServer.addOnlinePlayer(new TestPlayer("Jason"))
     testServer.addOnlinePlayer(new TestPlayer("Sam"))
 
     TimeFreezeService.freeze()
     plugin.setUpSessions()
 
-    plugin.playerRepository.count should equal (2)
-    plugin.playerRepository.findByPlayerName("Sam").joinedOn should equal (new DateTime)
-    plugin.playerRepository.findByPlayerName("Jason").joinedOn should equal (new DateTime)
+    PlayerRepository.count should equal (2)
+    PlayerRepository.findByPlayerName("Sam").joinedOn should equal (new DateTime)
+    PlayerRepository.findByPlayerName("Jason").joinedOn should equal (new DateTime)
 
     TimeFreezeService.unfreeze()
   }
@@ -64,19 +65,19 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
 
   it should "save any exisiting sessions and clear the session map when plugin is disabled" in {
     testServer.addOnlinePlayer(new TestPlayer("Sam"))
-    plugin.playerRepository.save(new Player("Sam"))
+    PlayerRepository.save(new Player("Sam"))
     SessionMap.put("Sam", new Session("Sam", "127.0.0.1"))
 
     testServer.addOnlinePlayer(new TestPlayer("Jason"))
-    plugin.playerRepository.save(new Player("Jason"))
+    PlayerRepository.save(new Player("Jason"))
     SessionMap.put("Jason", new Session("Jason", "127.0.0.1"))
 
     TimeFreezeService.freeze()
     plugin.tearDownSessions()
 
     SessionMap.sessions.size should equal (0)
-    plugin.sessionRepository.count should equal (2)
-    plugin.sessionRepository.findByPlayerName("Sam").head.disconnectedAt should equal (new DateTime)
+    SessionRepository.count should equal (2)
+    SessionRepository.findByPlayerName("Sam").head.disconnectedAt should equal (new DateTime)
     TimeFreezeService.unfreeze()
   }
 
@@ -84,8 +85,8 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
     val now = DateTime.parse("2012-04-26T12:00:00.000-04:00")
     TimeFreezeService.freeze(now)
 
-    plugin.playerRepository.save(new Player("Sam"))
-    plugin.playerRepository.save(new Player("Jason"))
+    PlayerRepository.save(new Player("Sam"))
+    PlayerRepository.save(new Player("Jason"))
 
     testServer.addOnlinePlayer(new TestPlayer("Sam"))
     val samSession = new Session("Sam", "127.0.0.1")
@@ -103,12 +104,12 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
     TimeFreezeService.freeze(now.plusMinutes(120))
     plugin.tearDownSessions()
 
-    val sam = plugin.playerRepository.findByPlayerName("Sam")
+    val sam = PlayerRepository.findByPlayerName("Sam")
     sam.blocksBroken should equal (100)
     sam.blocksPlaced should equal (200)
     sam.score should equal (36000)
 
-    val jason = plugin.playerRepository.findByPlayerName("Jason")
+    val jason = PlayerRepository.findByPlayerName("Jason")
     jason.blocksBroken should equal (200)
     jason.blocksPlaced should equal (300)
     jason.score should equal (60000)
@@ -120,6 +121,6 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
     plugin.tearDownSessions()
 
     SessionMap.sessions.size should equal (0)
-    plugin.sessionRepository.count should equal (0)
+    SessionRepository.count should equal (0)
   }
 }

@@ -14,16 +14,18 @@ import org.bukkit.ChatColor
 
 @RunWith(classOf[JUnitRunner])
 class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  var warningRepository: WarningMessageRepository = null
-  var playerRepository: PlayerRepository = null
+  WarningMessageRepository.collection = getCollection("WarningMessages")
+  val warningRepository = WarningMessageRepository
+
+  PlayerRepository.collection = getCollection("Players")
+  val playerRepository = PlayerRepository
+
   var executor: WarningExecutor = null
   var server: TestServer = null
   var nonAdminPlayer: TestPlayer = null
   var adminPlayer: TestPlayer = null
 
   override def beforeEach() {
-    warningRepository = new WarningMessageRepository(getCollection("WarningMessages"))
-    playerRepository = new PlayerRepository(getCollection("Players"))
     server = new TestServer
     nonAdminPlayer = new TestPlayer()
     server.addOnlinePlayer(nonAdminPlayer)
@@ -32,7 +34,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     adminPlayer.setOp(true)
     server.addOnlinePlayer(adminPlayer)
 
-    executor = new WarningExecutor(server, playerRepository, warningRepository)
+    executor = new WarningExecutor
   }
 
   override def afterEach() {

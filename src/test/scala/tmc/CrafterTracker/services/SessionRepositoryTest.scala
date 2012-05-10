@@ -12,11 +12,9 @@ import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class SessionRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  var repository: SessionRepository = null
 
-  override def beforeEach() {
-    repository = new SessionRepository(getCollection("Sessions"));
-  }
+  SessionRepository.collection = getCollection("Sessions");
+  val repository = SessionRepository
 
   override def afterEach() {
     clearTestData()

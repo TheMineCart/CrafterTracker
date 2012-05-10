@@ -8,9 +8,7 @@ import org.joda.time.Minutes
 
 // Created by cyrus on 5/1/12 at 2:05 PM
 
-class PlayerConnectionListener(sessionRepository: SessionRepository, playerRepository: PlayerRepository) extends Listener {
-  var this.sessionRepository = sessionRepository
-  var this.playerRepository = playerRepository
+class PlayerConnectionListener extends Listener {
 
   @EventHandler
   def onPlayerConnect(event: PlayerLoginEvent) {
@@ -18,26 +16,26 @@ class PlayerConnectionListener(sessionRepository: SessionRepository, playerRepos
     val ipAddress = event.getAddress.toString
     SessionMap.put(playerName, new Session(playerName, ipAddress))
 
-    if (!playerRepository.exists(playerName))
-      playerRepository.save(new Player(playerName))
+    if (!PlayerRepository.exists(playerName))
+      PlayerRepository.save(new Player(playerName))
   }
 
   @EventHandler
   def onPlayerDisconnect(event: PlayerQuitEvent) {
     SessionMap.applyToSessionFor(event.getPlayer.getName,
-      (s:Session) => { s.disconnected; sessionRepository.save(s); updatePlayerStats(s) })
+      (s:Session) => { s.disconnected; SessionRepository.save(s); updatePlayerStats(s) })
     SessionMap.remove(event.getPlayer.getName)
   }
 
   private def updatePlayerStats(session: Session) {
-    if (!playerRepository.exists(session.username)) return
+    if (!PlayerRepository.exists(session.username)) return
 
-    var player = playerRepository.findByPlayerName(session.username)
+    var player = PlayerRepository.findByPlayerName(session.username)
     val duration = Minutes.minutesBetween(session.connectedAt, session.disconnectedAt).getMinutes
     player.addMinutesPlayed(duration)
     player.addBroken(session.blocksBroken)
     player.addPlaced(session.blocksPlaced)
     player.calculateScore
-    playerRepository.save(player)
+    PlayerRepository.save(player)
   }
 }

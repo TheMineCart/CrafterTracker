@@ -12,7 +12,9 @@ import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  val repository: WarningMessageRepository = new WarningMessageRepository(getCollection("WarningMessages"))
+
+  WarningMessageRepository.collection = getCollection("WarningMessages")
+  val repository = WarningMessageRepository
 
   override def afterEach() {
     clearTestData()
@@ -76,5 +78,4 @@ class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with Sho
     messages(1).sender should equal ("Sam")
     messages(2).sender should equal ("Jeremy")
   }
-
 }

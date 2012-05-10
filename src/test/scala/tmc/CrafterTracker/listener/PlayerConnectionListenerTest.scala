@@ -19,15 +19,15 @@ import tmc.CrafterTracker.services.{PlayerRepository, SessionRepository}
 
 @RunWith(classOf[JUnitRunner])
 class PlayerConnectionListenerTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  var sessionRepository: SessionRepository = null
-  var playerRepository: PlayerRepository = null
+  SessionRepository.collection = getCollection("Sessions")
+  var sessionRepository = SessionRepository
+  PlayerRepository.collection = getCollection("Players")
+  var playerRepository = PlayerRepository
   var playerConnectionListener: PlayerConnectionListener = null
   var jason: BukkitPlayer = null
 
   override def beforeEach() {
-    sessionRepository = new SessionRepository(getCollection("Sessions"))
-    playerRepository = new PlayerRepository(getCollection("Players"))
-    playerConnectionListener = new PlayerConnectionListener(sessionRepository, playerRepository)
+    playerConnectionListener = new PlayerConnectionListener
     jason = new TestPlayer("Jason")
   }
 

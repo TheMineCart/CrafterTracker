@@ -13,11 +13,8 @@ import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class PlayerRepositoryTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  var repository: PlayerRepository = null
-
-  override def beforeEach() {
-    repository = new PlayerRepository(getCollection("Players"))
-  }
+  PlayerRepository.collection = getCollection("Players")
+  var repository = PlayerRepository
 
   override def afterEach() {
     clearTestData()

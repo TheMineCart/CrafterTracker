@@ -2,17 +2,13 @@ package tmc.CrafterTracker.executors
 
 import org.bukkit.command.{Command, CommandSender, CommandExecutor}
 import tmc.CrafterTracker.services.{WarningMessageRepository, PlayerRepository}
-import org.bukkit.{ChatColor, Server}
+import org.bukkit.ChatColor
 import tmc.CrafterTracker.domain._
 
 
 // Created by cyrus on 5/9/12 at 1:10 PM
 
-class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageRepository) extends CommandExecutor {
-  val server: Server = s
-  val playerRepository: PlayerRepository = pR
-  val warningMessageRepository: WarningMessageRepository = wMR
-
+class WarningExecutor extends CommandExecutor {
   override def onCommand(commandSender: CommandSender, command: Command, commandName: String, args: Array[String]): Boolean = {
     if (!commandSender.isOp) {
       commandSender.sendMessage("You do not have access to that command!")
@@ -21,7 +17,7 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
     if (args.length < 3) {
       return false
     }
-    if (!playerRepository.exists(args(0))) {
+    if (!PlayerRepository.exists(args(0))) {
       commandSender.sendMessage("Could not find player " + ChatColor.DARK_PURPLE + args(0) + ChatColor.WHITE + ". Please double check your spelling.")
       return true
     }
@@ -31,15 +27,15 @@ class WarningExecutor(s: Server, pR: PlayerRepository, wMR: WarningMessageReposi
       return true
     }
 
-    val player = playerRepository.findByPlayerName(args(0))
+    val player = PlayerRepository.findByPlayerName(args(0))
     val message: String = args.slice(2, args.length).mkString(" ")
     val warning = new WarningMessage(commandSender.getName, args(0), message, matchInfraction(args(1)).get, player.score)
 
     player.addPenaltyScore(warning.score)
     player.calculateScore
 
-    warningMessageRepository.save(warning)
-    playerRepository.save(player)
+    WarningMessageRepository.save(warning)
+    PlayerRepository.save(player)
 
     commandSender.sendMessage("Successfully sent warning to " + ChatColor.DARK_PURPLE + args(0) + ChatColor.WHITE + ".")
 

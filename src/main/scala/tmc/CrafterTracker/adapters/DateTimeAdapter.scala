@@ -7,7 +7,7 @@ import java.util.Date
 
 // Created by cyrus on 5/4/12 at 2:53 PM
 
-class DateTimeAdapter extends JsonSerializer[DateTime] with JsonDeserializer[DateTime] {
+object DateTimeAdapter extends JsonSerializer[DateTime] with JsonDeserializer[DateTime] {
 
   override def serialize(src: DateTime, typeOfSrc: Type, context: JsonSerializationContext) = {
     new JsonPrimitive(src.toString())
