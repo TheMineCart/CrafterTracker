@@ -11,6 +11,7 @@ import org.joda.time.DateTime
 import tmc.BukkitTestUtilities.Services.{RepositoryTest, TimeFreezeService}
 
 // Created by cyrus on 5/4/12 at 10:21 AM
+
 @RunWith(classOf[JUnitRunner])
 class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   val plugin = new CrafterTrackerPlugin

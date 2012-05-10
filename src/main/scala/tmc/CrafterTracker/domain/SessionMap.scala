@@ -4,12 +4,8 @@ import collection.mutable.HashMap
 
 // Created by cyrus on 5/3/12 at 11:46 AM
 
-object SessionMap extends SessionMap {
-
-}
-
-class SessionMap {
-  var sessions: HashMap[String, Session] = new HashMap[String, Session]
+object SessionMap {
+  val sessions: HashMap[String, Session] = new HashMap[String, Session]
 
   def get(playerName: String): Option[Session] =
     sessions.get(playerName)
@@ -21,7 +17,7 @@ class SessionMap {
     sessions -= playerName
 
   def clear() =
-    sessions = sessions.empty
+    sessions.clear()
 
   def applyToSessionFor(playerName: String, function:(Session) => Unit) =
     sessions.get(playerName).map(function)
