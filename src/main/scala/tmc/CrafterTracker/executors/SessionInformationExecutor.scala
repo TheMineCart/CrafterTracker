@@ -9,7 +9,7 @@ import org.bukkit.ChatColor
 
 object SessionInformationExecutor extends CommandExecutor {
 
-  override def onCommand(sender: CommandSender, command: Command, s: String, args: Array[String]): Boolean = {
+  def onCommand(sender: CommandSender, command: Command, s: String, args: Array[String]): Boolean = {
     val player: Player = sender.getServer.getPlayer(sender.getName)
     SessionMap.applyToSessionFor(player.getName, (s: Session) => sendMessageTo(sender, s))
     true

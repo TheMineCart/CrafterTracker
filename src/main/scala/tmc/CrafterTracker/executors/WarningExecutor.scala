@@ -10,7 +10,7 @@ import tmc.CrafterTracker.domain._
 
 object WarningExecutor extends CommandExecutor {
 
-  override def onCommand(commandSender: CommandSender, command: Command, commandName: String, args: Array[String]): Boolean = {
+  def onCommand(commandSender: CommandSender, command: Command, commandName: String, args: Array[String]): Boolean = {
     if (!commandSender.isOp) {
       commandSender.sendMessage("You do not have access to that command!")
       return true

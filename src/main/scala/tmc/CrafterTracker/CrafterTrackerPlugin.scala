@@ -1,7 +1,7 @@
 package tmc.CrafterTracker
 
 import domain.{Player, Session, SessionMap}
-import executors.{WarningExecutor, SessionInformationExecutor}
+import executors.{PlayerScoreExecutor, WarningExecutor, SessionInformationExecutor}
 import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
 import org.joda.time.Minutes
@@ -58,6 +58,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
   def registerCommandExecutors() = {
     getCommand("sessioninfo").setExecutor(SessionInformationExecutor)
     getCommand("warn").setExecutor(WarningExecutor)
+    getCommand("score").setExecutor(PlayerScoreExecutor)
   }
 
   def registerEventListeners() {

@@ -11,3 +11,7 @@ commands:
     description: Warn a user
     permissions: CrafterTracker.warn
     usage: /<command> [player] [severity] [message]
+  score:
+    description: Displays a given player's score.
+    permissions: CrafterTracker.score
+    usage: /<command> [player(Optional)]
