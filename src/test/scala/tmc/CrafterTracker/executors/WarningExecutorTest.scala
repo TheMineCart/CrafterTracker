@@ -9,6 +9,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import tmc.CrafterTracker.domain.Player
 import org.bukkit.ChatColor
+import tmc.CrafterTracker.CtPlugin
 
 // Created by cyrus on 5/9/12 at 1:12 PM
 
@@ -26,6 +27,7 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
 
   override def beforeEach() {
     server = new TestServer
+    CtPlugin.server = server
     nonAdminPlayer = new TestPlayer()
     server.addOnlinePlayer(nonAdminPlayer)
 
@@ -91,6 +93,24 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     result should equal (true)
     adminPlayer.getMessage() should equal ("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
       "junk" + ChatColor.WHITE + ". Please double check your spelling.")
+  }
+
+  //The Happy Path
+  it should "create a new warning and save it to the database and update the user's penalty score if the user has a score of 0" in {
+    val goodJason = new Player("Jason")
+    playerRepository.save(goodJason)
+
+    warningRepository.findByPlayerName("Jason").size should equal(0)
+
+    val result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "You have been a bad player.") )
+
+    result should equal (true)
+    warningRepository.findByPlayerName("Jason").size should equal(1)
+
+    val badJason = playerRepository.findByPlayerName("Jason")
+    badJason.penaltyScore should equal (0)
+    badJason.score should equal (0)
+    adminPlayer.getMessage should equal ("Successfully sent warning to " + ChatColor.DARK_PURPLE + "Jason" + ChatColor.WHITE + ".")
   }
 
   //The Happy Path

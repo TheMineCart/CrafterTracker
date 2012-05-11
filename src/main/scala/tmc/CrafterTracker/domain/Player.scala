@@ -44,6 +44,6 @@ class Player(name: String) {
   }
 
   def calculateScore {
-    score = ((minutesPlayed/(1 + Days.daysBetween(new DateTime, joinedOn).getDays)) * (blocksPlaced + blocksBroken)) - penaltyScore
+    score = ((minutesPlayed/(1 + Days.daysBetween(joinedOn, new DateTime).getDays)) * (blocksPlaced + blocksBroken)) - penaltyScore
   }
 }

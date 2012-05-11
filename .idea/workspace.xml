@@ -11,6 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
     </list>
     <list id="36589b04-8bf3-4002-9dee-4ca6c20d57ad" name="workspace" comment="" />
     <ignored path="CrafterTracker.iws" />
@@ -69,66 +73,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Player.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionMap.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="20" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionRepository.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerScoreExecutor.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/PlayerScoreExecutor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="1" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#38#105#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrafterTrackerPlugin.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="55" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plugin.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="65" selection-start="150" selection-end="150" vertical-scroll-proportion="0.20689656">
+            <state line="6" column="65" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,7 +94,43 @@
       <file leaf-file-name="WarningExecutor.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="2" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
+            <state line="37" column="21" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WarningMessage.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="43" selection-start="463" selection-end="477" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="124" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Infraction.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="29" selection-start="206" selection-end="206" vertical-scroll-proportion="0.41114983">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WarningExecutorTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="34" selection-start="4673" selection-end="4673" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -179,22 +163,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerInteractionListener.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerInteractionListenerTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CtPlugin.scala" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/PlayerScoreExecutor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala" />
       </list>
     </option>
   </component>
@@ -693,6 +677,40 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrafterTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Infraction.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1334,7 +1352,11 @@
       <created>1336772096449</created>
       <updated>1336772096449</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added the score command.">
+      <created>1336772109014</created>
+      <updated>1336772109014</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1342,13 +1364,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.48397437" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.48397437" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6655949" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.5122863" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33440515" sideWeight="0.5090812" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1357,8 +1379,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19391026" sideWeight="0.357985" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23905014" sideWeight="0.67202574" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20405982" sideWeight="0.67202574" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33440515" sideWeight="0.48931623" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20405982" sideWeight="0.6655949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33440515" sideWeight="0.4871795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27652735" sideWeight="0.4957265" order="1" side_tool="false" content_ui="tabs" />
@@ -1484,21 +1506,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../craftbukkit-1.2.5-R1.0.jar!/org/bukkit/plugin/PluginManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="903" selection-end="903" vertical-scroll-proportion="0.34664536" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/CrafterTrackerPluginTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.27259037" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="878" selection-end="878" vertical-scroll-proportion="0.3327787" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/listener/PlayerConnectionListener.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.47289157" />
@@ -1518,24 +1525,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="20" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/listener/PlayerConnectionListenerTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="90" column="31" selection-start="3372" selection-end="3372" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/SessionMap.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="20" selection-start="592" selection-end="592" vertical-scroll-proportion="0.62068963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/SessionRepository.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+        <state line="14" column="17" selection-start="405" selection-end="405" vertical-scroll-proportion="0.03448276">
           <folding />
         </state>
       </provider>
@@ -1547,23 +1551,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="2" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/PlayerScoreExecutor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="1" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
+        <state line="35" column="1" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.7670549">
           <folding>
             <element signature="e#38#105#0" expanded="true" />
           </folding>
@@ -1572,14 +1562,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/CrafterTrackerPlugin.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="55" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0">
+        <state line="60" column="55" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.5657238">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="65" selection-start="150" selection-end="150" vertical-scroll-proportion="0.20689656">
+        <state line="6" column="65" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/SessionInformationExecutor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="2" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/WarningMessage.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="43" selection-start="463" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="34" selection-start="4673" selection-end="4673" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="21" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Player.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="124" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/domain/Infraction.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="206" selection-end="206" vertical-scroll-proportion="0.41114983">
           <folding />
         </state>
       </provider>
