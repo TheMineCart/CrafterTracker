@@ -59,7 +59,7 @@ class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with Sho
     unacknowledgedMsgs.head.infraction should equal (Minor)
   }
 
-  it should "return a list of ordered messages" in {
+  it should "return a list of ordered messages by most recent create time" in {
     val now = new DateTime
 
     TimeFreezeService.freeze(now.plusMinutes(1))
@@ -74,8 +74,8 @@ class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with Sho
     TimeFreezeService.unfreeze()
 
     val messages: List[WarningMessage] = repository.findByPlayerName("Paul")
-    messages(0).sender should equal ("Jason")
+    messages(0).sender should equal ("Jeremy")
     messages(1).sender should equal ("Sam")
-    messages(2).sender should equal ("Jeremy")
+    messages(2).sender should equal ("Jason")
   }
 }

@@ -8,20 +8,22 @@ import tmc.CrafterTracker.domain.Player
 import tmc.BukkitTestUtilities.Services.{TimeFreezeService, RepositoryTest}
 import org.joda.time.DateTime
 import org.bukkit.ChatColor
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/14/12 at 10:00 AM
 
-class PlayerInformationExecutor$Test extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
-  var panda = new Player("Panda")
-  val admin = new TestPlayer("Panda")
-  admin.setOp(true)
+@RunWith(classOf[JUnitRunner])
+class PlayerInformationExecutorTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
+  var panda: Player = null
+  var admin: TestPlayer = null
   val thirteenthOfMay = new DateTime(2012, 5, 13, 0, 0, 0)
   val fourteenthOfMay = new DateTime(2012, 5, 14, 0, 0, 0)
 
   override def beforeEach() {
     TimeFreezeService.freeze(fourteenthOfMay)
-    var panda = new Player("Panda")
-    val admin = new TestPlayer("Panda")
+    panda = new Player("Panda")
+    admin = new TestPlayer("Panda")
     admin.setOp(true)
 
     PlayerRepository.collection = getCollection("Players")

@@ -37,7 +37,7 @@ object WarningMessageRepository {
   private def buildList(query: BasicDBObject): List[WarningMessage] = {
     var warningList : List[WarningMessage] = List()
     val cursor = collection.find(query)
-    cursor.sort(new BasicDBObject("issuedAt", -1))
+    cursor.sort(new BasicDBObject("issuedAt", 1))
 
     while(cursor.hasNext) {
       val dbObject = cursor.next

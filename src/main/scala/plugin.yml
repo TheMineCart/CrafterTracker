@@ -20,3 +20,8 @@ commands:
     permissions: CrafterTracker.playerinfo
     usage: /<command> [player(Optional)]
     aliases: [pi, pinfo]
+  warningsfor:
+    description: Displays a player's warnings.
+    permissions: CrafterTracker.warningsfor
+    usage: /<command> [player]
+    aliases: [wf, wfor]
