@@ -5,7 +5,7 @@ import executors._
 import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
 import org.joda.time.Minutes
-import services.{PlayerRepository, SessionRepository}
+import services.{PlayerWarningService, PlayerRepository, SessionRepository}
 
 // Created by cyrus on 5/1/12 at 10:18 AM
 
@@ -18,9 +18,12 @@ class CrafterTrackerPlugin extends JavaPlugin {
     registerCommandExecutors()
     registerEventListeners()
     setUpSessions()
+    PlayerWarningService.active = true
+    PlayerWarningService.start()
   }
 
   override def onDisable() {
+    PlayerWarningService.active = false
     tearDownSessions()
   }
 

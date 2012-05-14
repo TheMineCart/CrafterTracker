@@ -15,7 +15,6 @@ import tmc.CrafterTracker.domain._
 @RunWith(classOf[JUnitRunner])
 class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
 
-
   var admin = new TestPlayer("Gorilla")
 
   override def beforeEach() {
@@ -112,6 +111,7 @@ class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with S
   }
 
   it should "display a message if your page number exceeds the bounds" in {
+    PlayerRepository.save(new Player("Cardinal"))
     WarningInformationExecutor.onCommand(admin, null, "warningsfor", Array("Cardinal", "2"))
 
     admin.getMessages.size() should equal (1)
