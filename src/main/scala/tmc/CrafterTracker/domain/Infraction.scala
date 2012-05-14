@@ -23,5 +23,4 @@ object Major extends Infraction {
   val penalty = 0.5F
 
   override def toString = {"major"}
-
 }

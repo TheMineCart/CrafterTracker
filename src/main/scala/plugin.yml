@@ -15,3 +15,8 @@ commands:
     description: Displays a given player's score.
     permissions: CrafterTracker.score
     usage: /<command> [player(Optional)]
+  playerinfo:
+    description: Shows a player's server join date and average play time.
+    permissions: CrafterTracker.playerinfo
+    usage: /<command> [player(Optional)]
+    aliases: [pi, pinfo]

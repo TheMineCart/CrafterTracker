@@ -11,7 +11,7 @@ object PlayerScoreExecutor extends CommandExecutor {
 
   def onCommand(sender: CommandSender, command: Command, commandName: String, args: Array[String]): Boolean = {
     if (!sender.isOp && args.length > 0) {
-      sender.sendMessage("You do not have access to that command.")
+      sender.sendMessage("You do not have access to that command!")
       return true
     }
 
