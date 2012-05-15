@@ -58,7 +58,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
     persistedPlayer
   }
 
-  def registerCommandExecutors() = {
+  def registerCommandExecutors() {
     getCommand("sessioninfo").setExecutor(SessionInformationExecutor)
     getCommand("warn").setExecutor(WarningExecutor)
     getCommand("score").setExecutor(PlayerScoreExecutor)
