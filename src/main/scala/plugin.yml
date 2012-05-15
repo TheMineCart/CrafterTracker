@@ -25,3 +25,8 @@ commands:
     permissions: CrafterTracker.warningsfor
     usage: /<command> [player]
     aliases: [wf, wfor]
+  acknowledge:
+    description: Acknowledge a warning with identification number.
+    permissions: CrafterTracker.acknowledge
+    usage: /<command> [warningId]
+    aliases: [ack]

@@ -9,17 +9,20 @@ import org.bukkit.ChatColor
 object PlayerWarningService extends Actor {
 
   var active: Boolean = false
-  var sleepPeriod: Int = 30000
+  var sleepPeriod: Int = 10000
 
   def act() {
     while(active) {
       Thread.sleep(sleepPeriod)
       CtPlugin.server.getOnlinePlayers.foreach(player => {
-        WarningMessageRepository.findUnacknowledgedByPlayerName(player.getName).zipWithIndex foreach(messageTuple => {
-          player.sendMessage("You have been warned for " + ChatColor.RED +"\"" + messageTuple._1.text + "\"")
-          player.sendMessage("This is a " + messageTuple._1.infraction.chatOutput + " infraction and you have lost " +
-                             ChatColor.DARK_PURPLE + messageTuple._1.score + ChatColor.WHITE + " points")
-          player.sendMessage("In order to stop this message from repeating, please execute /acknowledgewarning " + (messageTuple._2 + 1))
+        WarningMessageRepository.findUnacknowledgedByPlayerName(player.getName).foreach(message => {
+          player.sendMessage("")
+          player.sendMessage("* You have been warned for \"" + ChatColor.RED  + message.text + ChatColor.WHITE + "\"")
+          player.sendMessage("* This is a " + message.infraction.chatOutput + " infraction and you have lost " +
+                             ChatColor.DARK_AQUA + message.score + ChatColor.WHITE + " points")
+          player.sendMessage("* Please execute " + ChatColor.RED + "/acknowledge " +
+                             (message.issuedAt.toString(CtPlugin.warningIdFormat)) +
+                             ChatColor.WHITE + " to stop this message from repeating.")
         })
       })
     }

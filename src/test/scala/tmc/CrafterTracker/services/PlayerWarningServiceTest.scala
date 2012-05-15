@@ -38,11 +38,13 @@ class PlayerWarningServiceTest extends RepositoryTest with FlatSpec with ShouldM
     Thread.sleep(1000)
     PlayerWarningService.active = false
 
-    jason.getMessages.size() should equal(3)
-    jason.getMessage should equal ("You have been warned for " + ChatColor.RED + "\"try to be less of a beardon...\"")
-    jason.getMessage(1) should equal ("This is a " + Major.chatOutput + " infraction and you have lost " +
-                                      ChatColor.DARK_PURPLE + 500 + ChatColor.WHITE + " points")
-    jason.getMessage(2) should equal ("In order to stop this message from repeating, please execute /acknowledgewarning 1")
+    jason.getMessages.size() should equal(4)
+    jason.getMessage should equal ("")
+    jason.getMessage(1) should equal ("* You have been warned for \"" + ChatColor.RED + "try to be less of a beardon..." + ChatColor.WHITE + "\"")
+    jason.getMessage(2) should equal ("* This is a " + Major.chatOutput + " infraction and you have lost " +
+                                      ChatColor.DARK_AQUA + 500 + ChatColor.WHITE + " points")
+    jason.getMessage(3) should equal ("* Please execute " + ChatColor.RED + "/acknowledge " + warning.issuedAt.toString(CtPlugin.warningIdFormat) +
+      ChatColor.WHITE + " to stop this message from repeating.")
   }
 
 }

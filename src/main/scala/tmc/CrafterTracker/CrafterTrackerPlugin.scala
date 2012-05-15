@@ -64,6 +64,7 @@ class CrafterTrackerPlugin extends JavaPlugin {
     getCommand("score").setExecutor(PlayerScoreExecutor)
     getCommand("playerinfo").setExecutor(PlayerInformationExecutor)
     getCommand("warningsfor").setExecutor(WarningInformationExecutor)
+    getCommand("acknowledge").setExecutor(AcknowledgementExecutor)
   }
 
   def registerEventListeners() {

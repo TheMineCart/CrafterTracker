@@ -11,5 +11,6 @@ object CtPlugin {
   var plugin: JavaPlugin = null
   var server: Server = null
   var logger: Logger = null
+  val warningIdFormat = "yyMMddHHmm"
 
 }

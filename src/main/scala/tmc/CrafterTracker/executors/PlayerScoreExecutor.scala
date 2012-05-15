@@ -25,7 +25,7 @@ object PlayerScoreExecutor extends CommandExecutor {
     if (PlayerRepository.exists(playerName)) {
       val player = PlayerRepository.findByPlayerName(playerName)
       sender.sendMessage("Player " + ChatColor.DARK_PURPLE + playerName + ChatColor.WHITE +
-                          " has a score of " + ChatColor.DARK_PURPLE + player.score + ChatColor.WHITE + ".")
+                          " has a score of " + ChatColor.DARK_AQUA + player.score + ChatColor.WHITE + ".")
 
     } else {
       sender.sendMessage("Player " + ChatColor.DARK_PURPLE + playerName + ChatColor.WHITE + " does not exist.  " +

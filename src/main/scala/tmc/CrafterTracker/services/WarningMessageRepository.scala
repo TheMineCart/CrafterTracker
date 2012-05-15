@@ -7,6 +7,7 @@ import com.mongodb.{BasicDBObject, DBObject}
 import tmc.CrafterTracker.domain.{Infraction, WarningMessage}
 import tmc.CrafterTracker.adapters.{InfractionAdapter, DateTimeAdapter}
 import tmc.CrafterTracker.Database
+import java.util.regex.Pattern
 
 // Created by cyrus on 5/8/12 at 1:52 PM
 
@@ -32,6 +33,30 @@ object WarningMessageRepository {
     query.put("recipient", playerName)
     query.put("acknowledged", false)
     buildList(query)
+  }
+
+  def acknowledgeWarningFor(playerName: String, timestamp: DateTime): Boolean = {
+    val timeQuery = Pattern.compile(timestamp.toString("yyyy-MM-dd") + "T" + timestamp.toString("HH:mm"))
+
+    var query = new BasicDBObject
+    query.put("recipient", playerName)
+    query.put("acknowledged", false)
+    query.put("issuedAt", timeQuery)
+
+    buildList(query).foreach(warning => {
+      warning.acknowledge
+      val warningObject = JSON.parse(gson.toJson(warning, classOf[WarningMessage])).asInstanceOf[DBObject]
+      updateWhere(warning.recipient, timeQuery, warningObject )
+      return true
+    })
+    false
+  }
+
+  private def updateWhere(recipient: String, timestampPattern: Pattern, warningObject: DBObject) {
+    val updateWhere = new BasicDBObject()
+    updateWhere.put("recipient", recipient)
+    updateWhere.put("issuedAt", timestampPattern)
+    collection.update(updateWhere, warningObject, true, false)
   }
 
   private def buildList(query: BasicDBObject): List[WarningMessage] = {

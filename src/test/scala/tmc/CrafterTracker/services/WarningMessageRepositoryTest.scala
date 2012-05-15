@@ -78,4 +78,26 @@ class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with Sho
     messages(1).sender should equal ("Sam")
     messages(2).sender should equal ("Jason")
   }
+
+  it should "acknowledge a warning message and return true" in {
+    TimeFreezeService.freeze()
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "You bad", Major, 500))
+    val result = WarningMessageRepository.acknowledgeWarningFor("Jason", new DateTime)
+
+    result should equal (true)
+    WarningMessageRepository.findByPlayerName("Jason")(0).acknowledged should equal (true)
+    TimeFreezeService.unfreeze()
+  }
+
+  it should "not acknowledge a message and return false if recipient and time is wrong" in {
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "You bad", Major, 500))
+    var result = WarningMessageRepository.acknowledgeWarningFor("NotJason", new DateTime)
+
+    result should equal (false)
+    WarningMessageRepository.findByPlayerName("Jason")(0).acknowledged should equal (false)
+
+    result = WarningMessageRepository.acknowledgeWarningFor("Jason", (new DateTime()).plusMinutes(1))
+    result should equal (false)
+    WarningMessageRepository.findByPlayerName("Jason")(0).acknowledged should equal (false)
+  }
 }
