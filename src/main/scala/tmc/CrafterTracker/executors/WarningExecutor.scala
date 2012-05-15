@@ -23,19 +23,16 @@ object WarningExecutor extends CommandExecutor {
       sender.sendMessage("Could not find player " + ChatColor.DARK_PURPLE + args(0) + ChatColor.WHITE + ". Please double check your spelling.")
       return true
     }
+    if (isOffenderAnOperator(args(0))){
+      sender.sendMessage(ChatColor.DARK_RED + "You cannot warn another server operator!")
+      return true;
+    }
     if (matchInfraction(args(1)) == None) {
       sender.sendMessage("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
         args(1) + ChatColor.WHITE + ". Please double check your spelling.")
       return true
     }
-    val iterator = CtPlugin.server.getOperators.iterator()
-    while (iterator.hasNext) {
-      val next = iterator.next()
-      if (next.getName.equals(args(0))) {
-        sender.sendMessage(ChatColor.DARK_RED + "You cannot warn another server operator!")
-        return true
-      }
-    }
+
     val player = PlayerRepository.findByPlayerName(args(0))
     val message: String = args.slice(2, args.length).mkString(" ")
     val infraction = matchInfraction(args(1)).get
@@ -50,6 +47,17 @@ object WarningExecutor extends CommandExecutor {
     sender.sendMessage("Successfully sent warning to " + ChatColor.DARK_PURPLE + args(0) + ChatColor.WHITE + ".")
     sendOnlineOpsNotification(sender.getName, args(0), infraction)
     true
+  }
+
+  private def isOffenderAnOperator(playerName: String): Boolean = {
+    val iterator = CtPlugin.server.getOperators.iterator()
+    while (iterator.hasNext) {
+      val next = iterator.next()
+      if (next.getName.equals(playerName)) {
+        return true
+      }
+    }
+    false
   }
 
   private def matchInfraction(infraction: String): Option[Infraction] = {

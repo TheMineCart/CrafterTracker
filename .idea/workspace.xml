@@ -11,12 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d495b5-bffb-48df-9f64-946c42cbf578" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tmc_BukkitTestUtilities_BukkitTestUtilities_0_1_8_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tmc_BukkitTestUtilities_BukkitTestUtilities_0_2_0_SNAPSHOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrafterTracker.iml" afterPath="$PROJECT_DIR$/CrafterTracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" afterPath="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
     </list>
     <list id="36589b04-8bf3-4002-9dee-4ca6c20d57ad" name="workspace" comment="" />
     <ignored path="CrafterTracker.iws" />
@@ -102,19 +98,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WarningExecutor.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WarningExecutor.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="60" selection-start="1148" selection-end="1159" vertical-scroll-proportion="0.0">
+            <state line="70" column="0" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.7522124">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WarningExecutorTest.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WarningExecutorTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="61" selection-start="4262" selection-end="4262" vertical-scroll-proportion="0.6017699">
+            <state line="94" column="44" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,8 +195,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/PlayerScoreExecutor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/services/PlayerWarningService.scala" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala" />
       </list>
     </option>
   </component>
@@ -832,7 +828,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.WarningExecutorTest">
+  <component name="RunManager" selected="ScalaTest.All Tests">
     <configuration default="false" name="WarningInformationExecutorTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
@@ -1380,7 +1376,11 @@
       <created>1337110971684</created>
       <updated>1337110971684</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Preventing server operators from warning other server operators.">
+      <created>1337115420768</created>
+      <updated>1337115420768</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1405,7 +1405,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23878205" sideWeight="0.7266881" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20405982" sideWeight="0.7266881" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34405145" sideWeight="0.4871795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34405145" sideWeight="0.4871795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6655949" order="2" side_tool="false" content_ui="combo" />
@@ -1449,7 +1449,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a command that allows players to acknowledge any warnings they might have." />
+    <option name="LAST_COMMIT_MESSAGE" value="Preventing server operators from warning other server operators." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1462,7 +1462,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Discovering map and applying it to the uses of SessionMap." />
     <MESSAGE value="Functional programming at its finest" />
     <MESSAGE value="Creating the WarningMessage domain object." />
     <MESSAGE value="Ordering all messages by age." />
@@ -1487,6 +1486,7 @@
     <MESSAGE value="Added WarningInformationExecutor to display a paginated view of a player's warnings in order of most recent." />
     <MESSAGE value="Added an actor to send warning messages to online players who have unacknowledged warnings." />
     <MESSAGE value="Added a command that allows players to acknowledge any warnings they might have." />
+    <MESSAGE value="Preventing server operators from warning other server operators." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1626,16 +1626,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="60" selection-start="1148" selection-end="1159" vertical-scroll-proportion="0.0">
+        <state line="94" column="44" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/tmc/CrafterTracker/executors/WarningExecutorTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/tmc/CrafterTracker/executors/WarningExecutor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="61" selection-start="4262" selection-end="4262" vertical-scroll-proportion="0.6017699">
+        <state line="70" column="0" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.7522124">
           <folding />
         </state>
       </provider>
