@@ -25,10 +25,17 @@ object WarningExecutor extends CommandExecutor {
     }
     if (matchInfraction(args(1)) == None) {
       sender.sendMessage("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
-                                args(1) + ChatColor.WHITE + ". Please double check your spelling.")
+        args(1) + ChatColor.WHITE + ". Please double check your spelling.")
       return true
     }
-
+    val iterator = CtPlugin.server.getOperators.iterator()
+    while (iterator.hasNext) {
+      val next = iterator.next()
+      if (next.getName.equals(args(0))) {
+        sender.sendMessage(ChatColor.DARK_RED + "You cannot warn another server operator!")
+        return true
+      }
+    }
     val player = PlayerRepository.findByPlayerName(args(0))
     val message: String = args.slice(2, args.length).mkString(" ")
     val infraction = matchInfraction(args(1)).get
@@ -56,7 +63,7 @@ object WarningExecutor extends CommandExecutor {
 
   private def sendOnlineOpsNotification(senderName: String, recipientName: String, infraction: Infraction) {
     CtPlugin.server.getOnlinePlayers.filter(p => p.isOp && p.getName != senderName)
-      .map(p => p.sendMessage("Player " + ChatColor.DARK_PURPLE +  recipientName + ChatColor.WHITE +
-                              " has received a " + infraction.toString + " warning."))
+      .map(p => p.sendMessage("Player " + ChatColor.DARK_PURPLE + recipientName + ChatColor.WHITE +
+      " has received a " + infraction.toString + " warning."))
   }
 }

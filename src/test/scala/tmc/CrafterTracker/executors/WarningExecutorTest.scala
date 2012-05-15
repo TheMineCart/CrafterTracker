@@ -4,12 +4,12 @@ import tmc.BukkitTestUtilities.Services.RepositoryTest
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 import tmc.CrafterTracker.services.{WarningMessageRepository, PlayerRepository}
-import tmc.BukkitTestUtilities.Mocks.{TestServer, TestPlayer}
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import tmc.CrafterTracker.domain.Player
 import org.bukkit.ChatColor
 import tmc.CrafterTracker.CtPlugin
+import tmc.BukkitTestUtilities.Mocks.{TestOfflinePlayer, TestServer, TestPlayer}
 
 // Created by cyrus on 5/9/12 at 1:12 PM
 
@@ -93,6 +93,18 @@ class WarningExecutorTest extends RepositoryTest with FlatSpec with ShouldMatche
     result should equal (true)
     adminPlayer.getMessage() should equal ("No matching infraction for " + ChatColor.DARK_PURPLE + "" +
       "junk" + ChatColor.WHITE + ". Please double check your spelling.")
+  }
+
+  it should "prevent a user from warning another player who is a server operator" in {
+    PlayerRepository.save(new Player("Jason"))
+    val jason = new TestOfflinePlayer("Jason")
+    jason.setOp(true)
+    server.addOfflinePlayer(jason)
+
+    val result = WarningExecutor.onCommand(adminPlayer, null, "warn", Array("Jason", "minor", "You will be punished"))
+
+    result should equal (true)
+    adminPlayer.getMessage should equal (ChatColor.DARK_RED + "You cannot warn another server operator!")
   }
 
   //The Happy Path
