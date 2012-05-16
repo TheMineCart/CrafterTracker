@@ -1,6 +1,6 @@
 package tmc.CrafterTracker
 
-import domain.{Player, Session, SessionMap}
+import domain._
 import executors._
 import listener.{PlayerInteractionListener, PlayerConnectionListener}
 import org.bukkit.plugin.java.JavaPlugin
@@ -12,19 +12,38 @@ import services.{PlayerWarningService, PlayerRepository, SessionRepository}
 class CrafterTrackerPlugin extends JavaPlugin {
 
   override def onEnable() {
-    CtPlugin.plugin = this
-    CtPlugin.server = getServer
-    CtPlugin.logger = getLogger
+    CtPlugin.initialize(this)
+
+    CtPlugin.logger.info("Configuring...")
+    Configuration.initialize
+
+    CtPlugin.logger.info("Initializing database...")
+    Database.initialize
+
+    CtPlugin.logger.info("Registering command executors...")
     registerCommandExecutors()
+
+    CtPlugin.logger.info("Registering event listeners...")
     registerEventListeners()
+
+    CtPlugin.logger.info("Setting up new sessions for connected players...")
     setUpSessions()
+
+    CtPlugin.logger.info("Starting player warning service...")
     PlayerWarningService.active = true
     PlayerWarningService.start()
+
+    CtPlugin.logger.info("Initialization complete!")
   }
 
   override def onDisable() {
+    CtPlugin.logger.info("Disabling PlayerWarningService...")
     PlayerWarningService.active = false
+
+    CtPlugin.logger.info("Saving sessions for connected players...")
     tearDownSessions()
+
+    CtPlugin.logger.info("Disabling...")
   }
 
   def setUpSessions() {

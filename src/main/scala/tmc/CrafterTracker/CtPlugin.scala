@@ -13,4 +13,9 @@ object CtPlugin {
   var logger: Logger = null
   val warningIdFormat = "yyMMddHHmm"
 
+  def initialize(p: JavaPlugin) {
+    this.plugin = p
+    server = plugin.getServer
+    logger = plugin.getLogger
+  }
 }

@@ -3,17 +3,16 @@ package tmc.CrafterTracker.services
 import com.google.gson.GsonBuilder
 import org.joda.time.DateTime
 import com.mongodb.util.JSON
-import com.mongodb.{BasicDBObject, DBObject}
 import tmc.CrafterTracker.domain.{Infraction, WarningMessage}
 import tmc.CrafterTracker.adapters.{InfractionAdapter, DateTimeAdapter}
-import tmc.CrafterTracker.Database
 import java.util.regex.Pattern
+import com.mongodb.{DBCollection, BasicDBObject, DBObject}
 
 // Created by cyrus on 5/8/12 at 1:52 PM
 
 object WarningMessageRepository {
 
-  var collection = Database.db.getCollection("WarningMessages")
+  var collection: DBCollection = null
   val gson = new GsonBuilder()
     .registerTypeAdapter(classOf[DateTime], DateTimeAdapter)
     .registerTypeAdapter(classOf[Infraction], InfractionAdapter)

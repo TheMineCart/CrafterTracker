@@ -6,13 +6,12 @@ import tmc.CrafterTracker.adapters.DateTimeAdapter
 import org.joda.time.DateTime
 import com.mongodb.util.JSON
 import com.mongodb.{BasicDBObject, DBCollection, DBObject}
-import tmc.CrafterTracker.Database
 
 // Created by cyrus on 5/2/12 at 1:36 PM
 
 object SessionRepository {
 
-  var collection: DBCollection = Database.db.getCollection("Sessions")
+  var collection: DBCollection = null
   val gson = new GsonBuilder().registerTypeAdapter(classOf[DateTime], DateTimeAdapter).create
 
   def save(session: Session) {

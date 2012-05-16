@@ -1,8 +1,8 @@
 package tmc.CrafterTracker.services
 
 import actors.Actor
-import tmc.CrafterTracker.CtPlugin
 import org.bukkit.ChatColor
+import tmc.CrafterTracker.CtPlugin
 
 // Created by cyrus on 5/14/12 at 3:47 PM
 

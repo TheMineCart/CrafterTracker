@@ -6,13 +6,13 @@ import org.bukkit.ChatColor
 // Created by cyrus on 5/8/12 at 1:39 PM
 
 trait Infraction {
-  val penalty: Float
+  var penalty: Float
 
   def chatOutput: String
 }
 
 object Minor extends Infraction {
-  val penalty = 0.1F
+  var penalty = 0.1F
 
   override def toString = {"minor"}
 
@@ -20,7 +20,7 @@ object Minor extends Infraction {
 }
 
 object Moderate extends Infraction {
-  val penalty = 0.25F
+  var penalty = 0.25F
 
   override def toString = {"moderate"}
 
@@ -28,7 +28,7 @@ object Moderate extends Infraction {
 }
 
 object Major extends Infraction {
-  val penalty = 0.5F
+  var penalty = 0.5F
 
   override def toString = {"major"}
 
