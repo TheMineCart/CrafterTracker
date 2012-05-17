@@ -100,4 +100,26 @@ class WarningMessageRepositoryTest extends RepositoryTest with FlatSpec with Sho
     result should equal (false)
     WarningMessageRepository.findByPlayerName("Jason")(0).acknowledged should equal (false)
   }
+
+  it should "get the list of warnings a user has received after a certain date" in {
+    var now = new DateTime
+    TimeFreezeService.freeze(now.minusDays(1))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "warning message 1", Major, 500))
+    TimeFreezeService.freeze(now.minusDays(2))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Bob", "warning message 2", Major, 500))
+    TimeFreezeService.freeze(now.minusDays(3))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jacob", "warning message 3", Major, 500))
+    TimeFreezeService.freeze(now.minusDays(4))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Dan", "warning message 4", Major, 500))
+    TimeFreezeService.unfreeze()
+
+    val recentMessages = WarningMessageRepository.findMessagesSince(now.minusDays(3))
+    recentMessages.size should equal (2)
+    recentMessages(0).recipient should equal ("Jason")
+    recentMessages(1).recipient should equal ("Bob")
+  }
+
+  it should "return an empty list if no warnings were created after a certain date" in {
+    WarningMessageRepository.findMessagesSince(new DateTime).size should equal (0)
+  }
 }

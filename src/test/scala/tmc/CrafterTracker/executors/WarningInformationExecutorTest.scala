@@ -69,11 +69,11 @@ class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with S
       " has received " + ChatColor.DARK_PURPLE + "3" + ChatColor.WHITE + " warning messages.")
 
     admin.getMessage(1) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-                                      ChatColor.DARK_AQUA + "75" + ChatColor.WHITE + " points for 3 falaffel")
+                                      ChatColor.DARK_AQUA + "75" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "3 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(2) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-                                      ChatColor.DARK_AQUA + "50" + ChatColor.WHITE + " points for 2 falaffel")
+                                      ChatColor.DARK_AQUA + "50" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "2 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(3) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-                                      ChatColor.DARK_AQUA + "25" + ChatColor.WHITE + " points for 1 falaffel")
+                                      ChatColor.DARK_AQUA + "25" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "1 falaffel" + ChatColor.WHITE + "\"")
   }
 
   it should "limit the number of warning messages displayed to five per page" in {
@@ -85,15 +85,15 @@ class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with S
     admin.getMessages.size() should equal (7)
 
     admin.getMessage(1) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-      ChatColor.DARK_AQUA + "150" + ChatColor.WHITE + " points for 6 falaffel")
+      ChatColor.DARK_AQUA + "150" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "6 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(2) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-      ChatColor.DARK_AQUA + "125" + ChatColor.WHITE + " points for 5 falaffel")
+      ChatColor.DARK_AQUA + "125" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "5 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(3) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-      ChatColor.DARK_AQUA + "100" + ChatColor.WHITE + " points for 4 falaffel")
+      ChatColor.DARK_AQUA + "100" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "4 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(4) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-      ChatColor.DARK_AQUA + "75" + ChatColor.WHITE + " points for 3 falaffel")
+      ChatColor.DARK_AQUA + "75" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "3 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(5) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-      ChatColor.DARK_AQUA + "50" + ChatColor.WHITE + " points for 2 falaffel")
+      ChatColor.DARK_AQUA + "50" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "2 falaffel" + ChatColor.WHITE + "\"")
     admin.getMessage(6) should equal ("See page " + ChatColor.RED + 2 + ChatColor.WHITE + " by executing " + ChatColor.RED + "/wf Cardinal 2")
   }
 
@@ -107,7 +107,7 @@ class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with S
     admin.getMessage(0) should equal ("Page " + ChatColor.RED + 2 + ChatColor.WHITE + " of " + ChatColor.RED + 2)
 
     admin.getMessage(3) should equal (Moderate.chatOutput + " infraction with a penalty of " +
-      ChatColor.DARK_AQUA + "25" + ChatColor.WHITE + " points for 1 falaffel")
+      ChatColor.DARK_AQUA + "25" + ChatColor.WHITE + " points for \"" + ChatColor.GRAY + "1 falaffel" + ChatColor.WHITE + "\"")
   }
 
   it should "display a message if your page number exceeds the bounds" in {

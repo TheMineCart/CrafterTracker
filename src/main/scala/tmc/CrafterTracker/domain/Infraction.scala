@@ -9,6 +9,8 @@ trait Infraction {
   var penalty: Float
 
   def chatOutput: String
+
+  def chatColor: ChatColor
 }
 
 object Minor extends Infraction {
@@ -17,6 +19,8 @@ object Minor extends Infraction {
   override def toString = {"minor"}
 
   def chatOutput = {ChatColor.YELLOW + "Minor" + ChatColor.WHITE}
+
+  def chatColor = {ChatColor.YELLOW}
 }
 
 object Moderate extends Infraction {
@@ -25,6 +29,8 @@ object Moderate extends Infraction {
   override def toString = {"moderate"}
 
   def chatOutput = {ChatColor.GOLD + "Moderate" + ChatColor.WHITE}
+
+  def chatColor = {ChatColor.GOLD}
 }
 
 object Major extends Infraction {
@@ -33,4 +39,6 @@ object Major extends Infraction {
   override def toString = {"major"}
 
   def chatOutput = {ChatColor.DARK_RED + "Major" + ChatColor.WHITE}
+
+  def chatColor = {ChatColor.RED}
 }

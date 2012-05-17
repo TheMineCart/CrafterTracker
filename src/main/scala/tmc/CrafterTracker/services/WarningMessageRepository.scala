@@ -51,6 +51,10 @@ object WarningMessageRepository {
     false
   }
 
+  def findMessagesSince(date: DateTime) : List[WarningMessage] = {
+    buildList(new BasicDBObject("issuedAt", new BasicDBObject("$gt", date.toString())))
+  }
+
   private def updateWhere(recipient: String, timestampPattern: Pattern, warningObject: DBObject) {
     val updateWhere = new BasicDBObject()
     updateWhere.put("recipient", recipient)

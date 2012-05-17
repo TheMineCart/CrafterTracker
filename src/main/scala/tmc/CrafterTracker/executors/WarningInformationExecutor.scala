@@ -1,7 +1,7 @@
 package tmc.CrafterTracker.executors
 
 import org.bukkit.command.{Command, CommandSender, CommandExecutor}
-import org.bukkit.ChatColor.{WHITE, DARK_AQUA, DARK_PURPLE, RED, DARK_RED}
+import org.bukkit.ChatColor.{WHITE, DARK_AQUA, DARK_PURPLE, RED, DARK_RED, GRAY}
 import tmc.CrafterTracker.services.{WarningMessageRepository, PlayerRepository}
 import tmc.CrafterTracker.domain.WarningMessage
 
@@ -61,7 +61,7 @@ object WarningInformationExecutor extends CommandExecutor {
     currentPage.foreach(
       message => sender.sendMessage(
         message.infraction.chatOutput + " infraction with a penalty of " +
-          DARK_AQUA + message.score + WHITE + " points for " + message.text
+          DARK_AQUA + message.score + WHITE + " points for \"" + GRAY + message.text + WHITE + "\""
       )
     )
 

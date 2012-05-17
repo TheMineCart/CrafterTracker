@@ -30,13 +30,13 @@ object Database {
       CtPlugin.logger.info("Attempting authentication to database " + Configuration.dbName + " with user " + Configuration.dbUser + ".")
       val success = db.authenticate(Configuration.dbUser, Configuration.dbPassword.toCharArray)
       if (success) {
-        CtPlugin.logger.info("Connected to database " + Configuration.dbName + ". Authentication was successful!")
+        CtPlugin.logger.info("Connection to database " + Configuration.dbName + " with authentication was successful!")
       } else {
         CtPlugin.logger.warning("Incorrect Mongo Database Authentication Info: " +
                                 "please double check the settings in your config.yml file.")
       }
     } else {
-      CtPlugin.logger.info("Connected to database " + Configuration.dbName + " without authentication was successful!")
+      CtPlugin.logger.info("Connection to database " + Configuration.dbName + " without authentication was successful!")
     }
   }
 
