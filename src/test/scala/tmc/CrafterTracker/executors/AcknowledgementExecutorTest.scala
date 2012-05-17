@@ -73,4 +73,26 @@ class AcknowledgementExecutorTest extends RepositoryTest with FlatSpec with Shou
     TimeFreezeService.unfreeze()
   }
 
+  it should "be able to acknowledge messages with the same id" in {
+    val now = new DateTime(2012, 05, 15, 15, 05, 20, 31)
+    TimeFreezeService.freeze(now)
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "You bad", Major, 1000))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "You bad", Major, 1000))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "You bad", Major, 1000))
+    WarningMessageRepository.save(new WarningMessage("Sam", "Jason", "You bad", Major, 1000))
+    val jason = new TestPlayer("Jason")
+
+    AcknowledgementExecutor.onCommand(jason, null, "acknowledge", Array("1205151505"))
+    AcknowledgementExecutor.onCommand(jason, null, "acknowledge", Array("1205151505"))
+    AcknowledgementExecutor.onCommand(jason, null, "acknowledge", Array("1205151505"))
+    AcknowledgementExecutor.onCommand(jason, null, "acknowledge", Array("1205151505"))
+
+    WarningMessageRepository.findUnacknowledgedByPlayerName("Jason").size should equal (0)
+    WarningMessageRepository.findByPlayerName("Jason")(0).acknowledged should equal (true)
+    WarningMessageRepository.findByPlayerName("Jason")(1).acknowledged should equal (true)
+    WarningMessageRepository.findByPlayerName("Jason")(2).acknowledged should equal (true)
+    WarningMessageRepository.findByPlayerName("Jason")(3).acknowledged should equal (true)
+    TimeFreezeService.unfreeze()
+  }
+
 }

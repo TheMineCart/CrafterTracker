@@ -45,7 +45,7 @@ object WarningMessageRepository {
     buildList(query).foreach(warning => {
       warning.acknowledge
       val warningObject = JSON.parse(gson.toJson(warning, classOf[WarningMessage])).asInstanceOf[DBObject]
-      updateWhere(warning.recipient, timeQuery, warningObject )
+      collection.update(query, warningObject, true, false)
       return true
     })
     false
@@ -53,13 +53,6 @@ object WarningMessageRepository {
 
   def findMessagesSince(date: DateTime) : List[WarningMessage] = {
     buildList(new BasicDBObject("issuedAt", new BasicDBObject("$gt", date.toString())))
-  }
-
-  private def updateWhere(recipient: String, timestampPattern: Pattern, warningObject: DBObject) {
-    val updateWhere = new BasicDBObject()
-    updateWhere.put("recipient", recipient)
-    updateWhere.put("issuedAt", timestampPattern)
-    collection.update(updateWhere, warningObject, true, false)
   }
 
   private def buildList(query: BasicDBObject): List[WarningMessage] = {
