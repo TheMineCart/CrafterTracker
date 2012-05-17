@@ -1,6 +1,6 @@
 name: CrafterTracker
 main: tmc.CrafterTracker.CrafterTrackerPlugin
-version: 0.01
+version: 0.1
 
 commands:
   sessioninfo:
