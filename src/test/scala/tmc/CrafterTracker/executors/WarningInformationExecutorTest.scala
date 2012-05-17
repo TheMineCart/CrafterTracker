@@ -17,6 +17,7 @@ class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with S
 
   var admin = new TestPlayer("Gorilla")
   WarningMessageRepository.collection = getCollection("WarningMessages")
+  PlayerRepository.collection = getCollection("Players")
 
   override def beforeEach() {
     admin = new TestPlayer("Gorilla")
