@@ -7,10 +7,13 @@ import tmc.CrafterTracker.domain.{Major, WarningMessage}
 import tmc.CrafterTracker.CtPlugin
 import tmc.BukkitTestUtilities.Mocks.{TestServer, TestPlayer}
 import org.bukkit.ChatColor
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 
 // Created by cyrus on 5/14/12 at 4:31 PM
 
+@RunWith(classOf[JUnitRunner])
 class PlayerWarningServiceTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   var server: TestServer = null
 

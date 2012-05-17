@@ -9,15 +9,19 @@ import tmc.BukkitTestUtilities.Services.{TimeFreezeService, RepositoryTest}
 import org.joda.time.DateTime
 import tmc.CrafterTracker.domain.{Major, WarningMessage}
 import tmc.CrafterTracker.CtPlugin
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
 // Created by cyrus on 5/15/12 at 9:44 AM
 
+@RunWith(classOf[JUnitRunner])
 class AcknowledgementExecutorTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   var sam: TestPlayer = null
 
+  WarningMessageRepository.collection = getCollection("WarningMessages")
+  PlayerRepository.collection = getCollection("Players")
+
   override def beforeEach() {
-    WarningMessageRepository.collection = getCollection("WarningMessages")
-    PlayerRepository.collection = getCollection("Players")
     sam = new TestPlayer("Sam")
   }
 
