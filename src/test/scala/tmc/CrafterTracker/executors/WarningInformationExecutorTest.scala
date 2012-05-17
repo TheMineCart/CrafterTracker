@@ -16,11 +16,11 @@ import tmc.CrafterTracker.domain._
 class WarningInformationExecutorTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
 
   var admin = new TestPlayer("Gorilla")
+  WarningMessageRepository.collection = getCollection("WarningMessages")
 
   override def beforeEach() {
     admin = new TestPlayer("Gorilla")
     admin.setOp(true)
-    WarningMessageRepository.collection = getCollection("WarningMessages")
   }
 
   override def afterEach() {

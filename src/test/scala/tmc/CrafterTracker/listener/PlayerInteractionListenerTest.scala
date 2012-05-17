@@ -10,15 +10,19 @@ import tmc.BukkitTestUtilities.Mocks.{TestBlock, TestBlockState, TestPlayer}
 import tmc.CrafterTracker.services.{WarningMessageRepository, PlayerRepository}
 import tmc.CrafterTracker.domain.{Minor, WarningMessage, Player, SessionMap}
 import org.bukkit.{ChatColor, Material}
+import tmc.BukkitTestUtilities.Services.RepositoryTest
 
 // Created by cyrus on 5/3/12 at 11:55 AM
 
 @RunWith(classOf[JUnitRunner])
-class PlayerInteractionListenerTest extends FlatSpec with ShouldMatchers with BeforeAndAfterEach {
+class PlayerInteractionListenerTest extends RepositoryTest with FlatSpec with ShouldMatchers with BeforeAndAfterEach {
   val listener = PlayerInteractionListener
+  WarningMessageRepository.collection = getCollection("WarningMessages")
+  PlayerRepository.collection = getCollection("Players")
 
   override def afterEach() {
     SessionMap.clear()
+    clearTestData()
   }
 
   it should "allow a player to break blocks if he has only acknowledged warnings" in {
