@@ -88,10 +88,11 @@ class AcknowledgementExecutorTest extends RepositoryTest with FlatSpec with Shou
     AcknowledgementExecutor.onCommand(jason, null, "acknowledge", Array("1205151505"))
 
     WarningMessageRepository.findUnacknowledgedByPlayerName("Jason").size should equal (0)
-    WarningMessageRepository.findByPlayerName("Jason")(0).acknowledged should equal (true)
-    WarningMessageRepository.findByPlayerName("Jason")(1).acknowledged should equal (true)
-    WarningMessageRepository.findByPlayerName("Jason")(2).acknowledged should equal (true)
-    WarningMessageRepository.findByPlayerName("Jason")(3).acknowledged should equal (true)
+    val jasonsWarnings = WarningMessageRepository.findByPlayerName("Jason")
+    jasonsWarnings(0).acknowledged should equal (true)
+    jasonsWarnings(1).acknowledged should equal (true)
+    jasonsWarnings(2).acknowledged should equal (true)
+    jasonsWarnings(3).acknowledged should equal (true)
     TimeFreezeService.unfreeze()
   }
 
