@@ -17,12 +17,12 @@ class CrafterTrackerPluginTest extends RepositoryTest with FlatSpec with ShouldM
   val plugin = new CrafterTrackerPlugin
   var testServer: TestServer = null
 
+  SessionRepository.collection = getCollection("Sessions")
+  PlayerRepository.collection = getCollection("Players")
+
   override def beforeEach() {
     testServer = new TestServer
     CtPlugin.server = testServer
-
-    SessionRepository.collection = getCollection("Sessions")
-    PlayerRepository.collection = getCollection("Players")
   }
 
   override def afterEach() {
