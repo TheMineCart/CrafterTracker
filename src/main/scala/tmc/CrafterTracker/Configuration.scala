@@ -81,16 +81,16 @@ object Configuration {
   }
 
   private def registerConfigurationValues {
-    var section = configuration.getConfigurationSection(MONGODB_SECTION)
+    val section = configuration.getConfigurationSection(MONGODB_SECTION)
     dbConnectionInfo.put(DB_NAME_OPTION, section.getString(DB_NAME_OPTION))
     dbConnectionInfo.put(DB_ADDRESS_OPTION, section.getString(DB_ADDRESS_OPTION))
     dbConnectionInfo.put(DB_USER_OPTION, section.getString(DB_USER_OPTION))
     dbConnectionInfo.put(DB_PASSWORD_OPTION, section.getString(DB_PASSWORD_OPTION))
 
-    section = configuration.getConfigurationSection(INFRACTION_SECTION)
-    infractionMultipliers.put(MINOR_OPTION, section.getDouble(MINOR_OPTION).toFloat)
-    infractionMultipliers.put(MODERATE_OPTION, section.getDouble(MODERATE_OPTION).toFloat)
-    infractionMultipliers.put(MAJOR_OPTION, section.getDouble(MAJOR_OPTION).toFloat)
+    val infractionSection = configuration.getConfigurationSection(INFRACTION_SECTION)
+    infractionMultipliers.put(MINOR_OPTION, infractionSection.getDouble(MINOR_OPTION).toFloat)
+    infractionMultipliers.put(MODERATE_OPTION, infractionSection.getDouble(MODERATE_OPTION).toFloat)
+    infractionMultipliers.put(MAJOR_OPTION, infractionSection.getDouble(MAJOR_OPTION).toFloat)
 
     enableBlockEventCancel = configuration.getBoolean(BLOCK_EVENT_OPTION)
     frequencyOfWarningDisplay = configuration.getInt(FREQUENCY_OPTION)

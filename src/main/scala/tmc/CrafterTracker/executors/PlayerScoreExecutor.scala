@@ -2,7 +2,9 @@ package tmc.CrafterTracker.executors
 
 import org.bukkit.command.{Command, CommandSender, CommandExecutor}
 import tmc.CrafterTracker.services.PlayerRepository
-import org.bukkit.ChatColor
+import org.bukkit.ChatColor.{DARK_PURPLE, DARK_AQUA, WHITE}
+import org.joda.time.{DateTime, Minutes}
+import tmc.CrafterTracker.domain.SessionMap
 
 
 // Created by cyrus on 5/11/12 at 5:21 PM
@@ -24,11 +26,19 @@ object PlayerScoreExecutor extends CommandExecutor {
     }
     if (PlayerRepository.exists(playerName)) {
       val player = PlayerRepository.findByPlayerName(playerName)
-      sender.sendMessage("Player " + ChatColor.DARK_PURPLE + playerName + ChatColor.WHITE +
-                          " has a score of " + ChatColor.DARK_AQUA + player.score + ChatColor.WHITE + ".")
+      SessionMap.get(playerName).map(
+        (session) => {
+          player.addBroken(session.blocksBroken)
+          player.addPlaced(session.blocksPlaced)
+          player.addMinutesPlayed(Minutes.minutesBetween(session.connectedAt, new DateTime()).getMinutes)
+          player.calculateScore
+        }
+      )
+      sender.sendMessage("Player " + DARK_PURPLE + playerName + WHITE +
+                         " has a score of " + DARK_AQUA + player.score + WHITE + ".")
 
     } else {
-      sender.sendMessage("Player " + ChatColor.DARK_PURPLE + playerName + ChatColor.WHITE + " does not exist.  " +
+      sender.sendMessage("Player " + DARK_PURPLE + playerName + WHITE + " does not exist.  " +
                          "Please double check the spelling.")
     }
     true
