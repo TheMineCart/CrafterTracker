@@ -2,6 +2,7 @@ package tmc.CrafterTracker.domain
 
 import org.joda.time.{Days, DateTime}
 import com.google.gson.annotations.Expose
+import scala.tmc.CrafterTracker.domain.Coefficient
 
 
 // Created by cyrus on 5/8/12 at 4:48 PM
@@ -48,7 +49,18 @@ class Player(name: String) {
   }
 
   def calculateScore {
-    score = (averageMinutesPlayed * (blocksPlaced + blocksBroken)) - penaltyScore
+    score = (averageMinutesPlayedValue * (blocksPlacedValue + blocksBrokenValue)) - penaltyScore
   }
 
+  private def averageMinutesPlayedValue: Int = {
+    (averageMinutesPlayed * Coefficient.averageMinutesMultiplier).toInt
+  }
+
+  private def blocksPlacedValue: Int = {
+    (blocksPlaced * Coefficient.blocksPlacedMultiplier).toInt
+  }
+
+  private def blocksBrokenValue: Int = {
+    (blocksBroken * Coefficient.blocksBrokenMultiplier).toInt
+  }
 }
