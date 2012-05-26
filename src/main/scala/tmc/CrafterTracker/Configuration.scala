@@ -4,7 +4,7 @@ import domain.{Moderate, Minor, Major}
 import org.bukkit.configuration.file.FileConfiguration
 import java.util.TreeMap
 import services.PlayerWarningService
-import scala.tmc.CrafterTracker.domain.Coefficient
+import tmc.CrafterTracker.domain.Coefficient
 
 // Created by cyrus on 5/16/12 at 10:03 AM
 

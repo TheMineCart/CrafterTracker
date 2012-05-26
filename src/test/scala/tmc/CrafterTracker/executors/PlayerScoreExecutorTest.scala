@@ -1,11 +1,10 @@
-package scala.tmc.CrafterTracker.executors
+package tmc.CrafterTracker.executors
 
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 import tmc.CrafterTracker.services.PlayerRepository
 import org.joda.time.DateTime
 import tmc.CrafterTracker.domain.{Session, SessionMap, Player}
-import tmc.CrafterTracker.executors.PlayerScoreExecutor
 import tmc.BukkitTestUtilities.Mocks.TestPlayer
 import org.bukkit.ChatColor.{DARK_AQUA, DARK_PURPLE, WHITE}
 import tmc.BukkitTestUtilities.Services.{TimeFreezeService, RepositoryTest}

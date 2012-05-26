@@ -2,7 +2,6 @@ package tmc.CrafterTracker.domain
 
 import org.joda.time.{Days, DateTime}
 import com.google.gson.annotations.Expose
-import scala.tmc.CrafterTracker.domain.Coefficient
 
 
 // Created by cyrus on 5/8/12 at 4:48 PM
