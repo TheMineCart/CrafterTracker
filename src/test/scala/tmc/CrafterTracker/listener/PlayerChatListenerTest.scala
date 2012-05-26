@@ -1,4 +1,4 @@
-package scala.tmc.CrafterTracker.listener
+package tmc.CrafterTracker.listener
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner

@@ -1,4 +1,4 @@
-package scala.tmc.CrafterTracker.domain
+package tmc.CrafterTracker.domain
 
 object Coefficient {
   var blocksPlacedMultiplier: Float = 1.0F

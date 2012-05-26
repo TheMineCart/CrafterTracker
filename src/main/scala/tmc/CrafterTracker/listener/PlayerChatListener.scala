@@ -1,4 +1,4 @@
-package scala.tmc.CrafterTracker.listener
+package tmc.CrafterTracker.listener
 
 import org.bukkit.event.player.PlayerChatEvent
 import tmc.CrafterTracker.services.WarningMessageRepository

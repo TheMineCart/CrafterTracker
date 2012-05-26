@@ -3,7 +3,7 @@
 
     <groupId>CrafterTracker</groupId>
     <artifactId>CrafterTracker</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
 
     <url>http://scala-lang.org</url>
     <repositories>
