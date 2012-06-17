@@ -18,4 +18,8 @@ object CtPlugin {
     server = plugin.getServer
     logger = plugin.getLogger
   }
+
+  def shutdown() {
+    server.getPluginManager.disablePlugin(plugin)
+  }
 }

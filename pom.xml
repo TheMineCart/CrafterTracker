@@ -3,7 +3,7 @@
 
     <groupId>CrafterTracker</groupId>
     <artifactId>CrafterTracker</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
 
     <url>http://scala-lang.org</url>
     <repositories>
@@ -57,7 +57,7 @@
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.0</version>
+            <version>2.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -70,12 +70,6 @@
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
             <version>2.7.3</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

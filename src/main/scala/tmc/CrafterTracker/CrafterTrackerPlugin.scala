@@ -20,20 +20,22 @@ class CrafterTrackerPlugin extends JavaPlugin {
     CtPlugin.logger.info("Initializing database...")
     Database.initialize
 
-    CtPlugin.logger.info("Registering command executors...")
-    registerCommandExecutors()
+    if(CtPlugin.plugin.isEnabled) {
+      CtPlugin.logger.info("Registering command executors...")
+      registerCommandExecutors()
 
-    CtPlugin.logger.info("Registering event listeners...")
-    registerEventListeners()
+      CtPlugin.logger.info("Registering event listeners...")
+      registerEventListeners()
 
-    CtPlugin.logger.info("Setting up new sessions for connected players...")
-    setUpSessions()
+      CtPlugin.logger.info("Setting up new sessions for connected players...")
+      setUpSessions()
 
-    CtPlugin.logger.info("Starting player warning service...")
-    PlayerWarningService.active = true
-    PlayerWarningService.start()
+      CtPlugin.logger.info("Starting player warning service...")
+      PlayerWarningService.active = true
+      PlayerWarningService.start()
 
-    CtPlugin.logger.info("Initialization complete!")
+      CtPlugin.logger.info("Initialization complete!")
+    }
   }
 
   override def onDisable() {
@@ -61,20 +63,23 @@ class CrafterTrackerPlugin extends JavaPlugin {
 
   def tearDownSessions() {
     CtPlugin.server.getOnlinePlayers.foreach(player => {
-      SessionMap.applyToSessionFor(player.getName,
-        (s: Session) => { s.disconnected; SessionRepository.save(s); PlayerRepository.save(updatePlayerStatistics(s))}
+      SessionMap.applyToSessionFor(player.getName, (s: Session) => {
+          s.disconnected
+        updatePlayerStatistics(s)
+        SessionRepository.save(s)
+        }
       )
     })
     SessionMap.clear()
   }
 
-  private def updatePlayerStatistics(s: Session): Player = {
+  private def updatePlayerStatistics(s: Session) {
     val persistedPlayer = PlayerRepository.findByPlayerName(s.username)
     persistedPlayer.addBroken(s.blocksBroken)
     persistedPlayer.addPlaced(s.blocksPlaced)
     persistedPlayer.addMinutesPlayed(Minutes.minutesBetween(s.connectedAt, s.disconnectedAt).getMinutes)
     persistedPlayer.calculateScore
-    persistedPlayer
+    PlayerRepository.save(persistedPlayer)
   }
 
   def registerCommandExecutors() {
