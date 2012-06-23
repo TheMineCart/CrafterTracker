@@ -62,14 +62,17 @@ class CrafterTrackerPlugin extends JavaPlugin {
   }
 
   def tearDownSessions() {
-    CtPlugin.server.getOnlinePlayers.foreach(player => {
-      SessionMap.applyToSessionFor(player.getName, (s: Session) => {
-          s.disconnected
-        updatePlayerStatistics(s)
-        SessionRepository.save(s)
-        }
-      )
-    })
+    CtPlugin.server.getOnlinePlayers.foreach(
+      player => {
+        SessionMap.applyToSessionFor(
+          player.getName, (s: Session) => {
+            s.disconnected
+            updatePlayerStatistics(s)
+            SessionRepository.save(s)
+          }
+        )
+      }
+    )
     SessionMap.clear()
   }
 

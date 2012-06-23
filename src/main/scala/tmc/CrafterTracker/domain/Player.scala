@@ -49,6 +49,7 @@ class Player(name: String) {
 
   def calculateScore {
     score = (averageMinutesPlayedValue * (blocksPlacedValue + blocksBrokenValue)) - penaltyScore
+    if (score < 0) score = 0
   }
 
   private def averageMinutesPlayedValue: Int = {
