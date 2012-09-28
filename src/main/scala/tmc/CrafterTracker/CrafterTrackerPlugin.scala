@@ -1,3 +1,25 @@
+/*
+ CrafterTracker is a CraftBukkit plugin that tracks player session data,
+ scores players based on quality and quantity of play, and allows the
+ server admins to punish a player for bad behavior.
+ Copyright (C) 2012 Cyrus Innovation
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ Contact the author, Jason Berry, at uniqueberry@gmail.com
+ Visit the Cyrus Innovation website at http://www.cyrusinnovation.com
+*/
 package tmc.CrafterTracker
 
 import domain._

@@ -1,4 +1,6 @@
+// Copyright (C) 2012 Cyrus Innovation
 package tmc.CrafterTracker.domain
+
 import org.joda.time.DateTime
 import com.google.gson.annotations.Expose
 

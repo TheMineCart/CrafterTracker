@@ -1,3 +1,4 @@
+# Copyright (C) 2012 Cyrus Innovation
 name: CrafterTracker
 main: tmc.CrafterTracker.CrafterTrackerPlugin
 version: 1.2.1

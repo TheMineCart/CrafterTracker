@@ -93,6 +93,8 @@
                 <directory>src/main/scala</directory>
                 <includes>
                     <include>plugin.yml</include>
+                    <include>README</include>
+                    <include>LICENSE</include>
                 </includes>
             </resource>
         </resources>

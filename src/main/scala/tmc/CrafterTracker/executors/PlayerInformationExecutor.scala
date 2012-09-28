@@ -1,3 +1,4 @@
+// Copyright (C) 2012 Cyrus Innovation
 package tmc.CrafterTracker.executors
 
 import org.bukkit.command.{Command, CommandSender, CommandExecutor}

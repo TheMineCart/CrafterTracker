@@ -1,3 +1,4 @@
+// Copyright (C) 2012 Cyrus Innovation
 package tmc.CrafterTracker.listener
 
 import org.bukkit.event.block.{BlockPlaceEvent, BlockBreakEvent}
